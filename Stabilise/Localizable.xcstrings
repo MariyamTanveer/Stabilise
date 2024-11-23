@@ -1,0 +1,94 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld - %2$@"
+          }
+        }
+      }
+    },
+    "Clinicians_portal" : {
+      "comment" : "Clinician's button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clinician’s Portal"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Klinikus portálja"
+          }
+        }
+      }
+    },
+    "Daily VADL Assessment" : {
+
+    },
+    "Exercise" : {
+      "comment" : "Exercise button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exercise"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gyakorlat"
+          }
+        }
+      }
+    },
+    "Falls_diary" : {
+      "comment" : "Falls Diary button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falls Diary"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Esések naplója"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "comment" : "Next"
+    },
+    "Please rate your performance of today’s activities on a scale of 1 to 10:\n\n1 = Independent  \n2 = Uncomfortable  \n3 = Decreased ability  \n4 = Slower, Cautious  \n5 = Prefer using an object for help  \n6 = Must use an object for help  \n7 = Must use special equipment  \n8 = Need physical assistance  \n9 = Dependent  \n10 = Too difficult, no longer perform  \n\nSelect NA if you didn’t perform the activity today." : {
+
+    },
+    "Questionnaire" : {
+      "comment" : "\"Questionnaire button\"",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Questionnaire"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kérdőív"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
