@@ -11,6 +11,23 @@
         }
       }
     },
+    "back" : {
+      "comment" : "Back Button",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vissza"
+          }
+        }
+      }
+    },
     "Clinicians_portal" : {
       "comment" : "Clinician's button",
       "localizations" : {
@@ -22,14 +39,28 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Klinikus portálja"
           }
         }
       }
     },
-    "Daily VADL Assessment" : {
-
+    "daily_vadl_assessment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily VADL Assessment"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napi VADL értékelés"
+          }
+        }
+      }
     },
     "Exercise" : {
       "comment" : "Exercise button",
@@ -59,17 +90,44 @@
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Esések naplója"
           }
         }
       }
     },
-    "Next" : {
-      "comment" : "Next"
+    "next" : {
+      "comment" : "Next",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Következő"
+          }
+        }
+      }
     },
-    "Please rate your performance of today’s activities on a scale of 1 to 10:\n\n1 = Independent  \n2 = Uncomfortable  \n3 = Decreased ability  \n4 = Slower, Cautious  \n5 = Prefer using an object for help  \n6 = Must use an object for help  \n7 = Must use special equipment  \n8 = Need physical assistance  \n9 = Dependent  \n10 = Too difficult, no longer perform  \n\nSelect NA if you didn’t perform the activity today." : {
+    "Next" : {
 
+    },
+    "Previous" : {
+
+    },
+    "Question %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Question %1$lld of %2$lld"
+          }
+        }
+      }
     },
     "Questionnaire" : {
       "comment" : "\"Questionnaire button\"",
@@ -88,6 +146,189 @@
           }
         }
       }
+    },
+    "questionnaire_intro_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please rate your performance of today’s activities on a scale of 1 to 10:\n1 = Independent  \n2 = Uncomfortable  \n3 = Decreased ability  \n4 = Slower, Cautious  \n5 = Prefer using an object for help  \n6 = Must use an object for help  \n7 = Must use special equipment  \n8 = Need physical assistance  \n9 = Dependent  \n10 = Too difficult, no longer perform  \n\nSelect NA if you didn’t perform the activity today."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kérem, értékelje a mai tevékenységei teljesítményét egy 1-től 10-ig terjedő skálán:\n1 = Önálló\n2 = Kényelmetlen\n3 = Csökkent képesség\n4 = Lassabb, óvatos\n5 = Inkább használ segédeszközt\n6 = Muszáj használni egy tárgyat\n7 = Speciális eszköz szükséges\n8 = Fizikai segítség szükséges\n9 = Függő\n10 = Túl nehéz, már nem hajtja végre\n\nVálassza az NA opciót, ha ma nem végezte el a tevékenységet."
+          }
+        }
+      }
+    },
+    "rating_decreased_ability" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Decreased ability"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Csökkent képesség"
+          }
+        }
+      }
+    },
+    "rating_dependent" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dependent"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Függő"
+          }
+        }
+      }
+    },
+    "rating_independent" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Independent"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Önálló"
+          }
+        }
+      }
+    },
+    "rating_must_object" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Must use an object for help"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muszáj használni egy tárgyat"
+          }
+        }
+      }
+    },
+    "rating_physical_assistance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Need physical assistance"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fizikai segítség szükséges"
+          }
+        }
+      }
+    },
+    "rating_prefer_object" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prefer using an object for help"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkább használ segédeszközt"
+          }
+        }
+      }
+    },
+    "rating_slower_cautious" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slower, Cautious"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lassabb, óvatos"
+          }
+        }
+      }
+    },
+    "rating_special_equipment" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Must use special equipment"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speciális eszköz szükséges"
+          }
+        }
+      }
+    },
+    "rating_too_difficult" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Too difficult, no longer perform"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Túl nehéz, már nem hajtja végre"
+          }
+        }
+      }
+    },
+    "rating_uncomfortable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uncomfortable"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kényelmetlen"
+          }
+        }
+      }
+    },
+    "Save and Return" : {
+
+    },
+    "Submit" : {
+
     }
   },
   "version" : "1.0"
