@@ -113,11 +113,15 @@
         }
       }
     },
-    "Next" : {
-
-    },
     "Previous" : {
-
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Előző"
+          }
+        }
+      }
     },
     "Question %lld of %lld" : {
       "localizations" : {
@@ -125,6 +129,482 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Question %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "question_active_recreation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active recreation (eg, sports, gardening)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktív szabadidős tevékenység (pl. sport, kertészkedés)"
+          }
+        }
+      }
+    },
+    "question_bathing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bathing yourself in the bathtub or shower"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fürdés a fürdőkádban vagy zuhany alatt"
+          }
+        }
+      }
+    },
+    "question_carrying_things" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carrying things while walking (eg, package, garbage bag)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cipelni dolgokat séta közben (pl. csomag, szemeteszsák)"
+          }
+        }
+      }
+    },
+    "question_dressing_lower" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dressing the lower body (eg, pants, skirt, underpants)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alsótest öltöztetése (pl. nadrág, szoknya, alsónemű)"
+          }
+        }
+      }
+    },
+    "question_dressing_upper" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dressing the upper body (eg, shirt, brassiere, undershirt)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felsőtest öltöztetése (pl. ing, melltartó, alsóing)"
+          }
+        }
+      }
+    },
+    "question_driving" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Driving a car"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autóvezetés"
+          }
+        }
+      }
+    },
+    "question_going_down_steps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Going down steps"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lépések le"
+          }
+        }
+      }
+    },
+    "question_going_up_steps" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Going up steps"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lépések fel"
+          }
+        }
+      }
+    },
+    "question_heavy_chores" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heavy household chores (eg, vacuuming, moving furniture)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nehéz házimunkák (pl. porszívózás, bútorok mozgatása)"
+          }
+        }
+      }
+    },
+    "question_intimate_activity" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intimate activity (eg, foreplay, sexual activity)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intim tevékenység (pl. előjáték, szexuális tevékenység)"
+          }
+        }
+      }
+    },
+    "question_light_chores" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light household chores (eg, dusting, putting items away)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Könnyű házimunkák (pl. portörlés, tárgyak elpakolása)"
+          }
+        }
+      }
+    },
+    "question_meal_preparation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meal preparation"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ételkészítés"
+          }
+        }
+      }
+    },
+    "question_moving_bathtub" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moving in or out of the bathtub or shower"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fürdőkádba lépés vagy kilépés"
+          }
+        }
+      }
+    },
+    "question_occupational_role" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Occupational role (eg, job, child care, homemaking)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Munkakör (pl. munka, gyermekgondozás, háztartás)"
+          }
+        }
+      }
+    },
+    "question_putting_on_shoes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putting on shoes"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cipő felvétele"
+          }
+        }
+      }
+    },
+    "question_putting_on_socks" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putting on socks or stockings"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zokni vagy harisnya felvétele"
+          }
+        }
+      }
+    },
+    "question_reaching_down" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaching down (eg, to the floor or shelf)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hajolni (pl. a padló vagy polc elérése)"
+          }
+        }
+      }
+    },
+    "question_reaching_overhead" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reaching overhead (eg, to a cupboard or shelf)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felemelni a karját (pl. szekrény vagy polc elérése)"
+          }
+        }
+      }
+    },
+    "question_sitting_up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sitting up from lying down"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felülni fekvésből"
+          }
+        }
+      }
+    },
+    "question_standing_up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standing up from sitting on the bed or chair"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Felállni ülésből (ágy vagy szék)"
+          }
+        }
+      }
+    },
+    "question_travelling" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Travelling around the community (car, bus)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Közlekedés a közösségben (autó, busz)"
+          }
+        }
+      }
+    },
+    "question_using_elevator" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using an elevator"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lift használata"
+          }
+        }
+      }
+    },
+    "question_using_escalator" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using an escalator"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mozgólépcső használata"
+          }
+        }
+      }
+    },
+    "question_walking_crowds" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking in crowds"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta tömegben"
+          }
+        }
+      }
+    },
+    "question_walking_level" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking on level surfaces"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta sík felületeken"
+          }
+        }
+      }
+    },
+    "question_walking_narrow" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking in narrow spaces (eg, corridor, grocery store aisle)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta szűk helyeken (pl. folyosó, bolti sor)"
+          }
+        }
+      }
+    },
+    "question_walking_open" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking in open spaces"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta nyílt térben"
+          }
+        }
+      }
+    },
+    "question_walking_uneven" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking on uneven surfaces"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta egyenetlen felületeken"
           }
         }
       }
@@ -324,11 +804,36 @@
         }
       }
     },
+    "Resume" : {
+      "comment" : "Resume",
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Folytatás"
+          }
+        }
+      }
+    },
     "Save and Return" : {
-
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mentés és kilépés"
+          }
+        }
+      }
     },
     "Submit" : {
-
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beküldés"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

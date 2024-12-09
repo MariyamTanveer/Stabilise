@@ -15,34 +15,38 @@ struct Questions: View {
     @State private var temporaryStorageKey: String = "TemporaryAnswers-\(Date().formatted(date: .numeric, time: .omitted))"
     
     
-    let questions: [String] = [
-        "Sitting up from lying down",
-        "Standing up from sitting on the bed or chair",
-        "Dressing the upper body (eg, shirt, brassiere, undershirt",
-        "Dressing the lower body (eg, pants, skirt, underpants",
-        "Putting on socks or stockings", "Putting on shoes",
-        "Moving in or out of the bathtub or shower",
-        "Bathing yourself in the bathtub or shower",
-        "Reaching overhead (eg, to a cupboard or shelf)",
-        "Reaching down (eg, to the floor or shelf)",
-        "Meal preparation",
-        "Intimate activity (eg, foreplay, sexual activity",
-        "Walking on level surfaces",
-        "Walking on uneven surfaces",
-        "Going up steps", "Going down steps",
-        "Walking in narrow spaces (eg, corridor, grocery store aisle)",
-        "Walking in open spaces",
-        "Walking in crowds",
-        "Using an elevator",
-        "Using an escalator",
-        "Driving a car",
-        "Carrying things while walking (eg, package, garbage bag)",
-        "Light household chores (eg, dusting, putting items away)",
-        "Heavy household chores (eg, vacuuming, moving furniture)",
-        "Active recreation (eg, sports, gardening)",
-        "Occupational role (eg, job, child care, homemaking, studenet)",
-        "Travelling around the community (car, bus)"
-    ]
+    private var questions: [String] {
+        [
+            NSLocalizedString("question_sitting_up", comment: ""),
+            NSLocalizedString("question_standing_up", comment: ""),
+            NSLocalizedString("question_dressing_upper", comment: ""),
+            NSLocalizedString("question_dressing_lower", comment: ""),
+            NSLocalizedString("question_putting_on_socks", comment: ""),
+            NSLocalizedString("question_putting_on_shoes", comment: ""),
+            NSLocalizedString("question_moving_bathtub", comment: ""),
+            NSLocalizedString("question_bathing", comment: ""),
+            NSLocalizedString("question_reaching_overhead", comment: ""),
+            NSLocalizedString("question_reaching_down", comment: ""),
+            NSLocalizedString("question_meal_preparation", comment: ""),
+            NSLocalizedString("question_intimate_activity", comment: ""),
+            NSLocalizedString("question_walking_level", comment: ""),
+            NSLocalizedString("question_walking_uneven", comment: ""),
+            NSLocalizedString("question_going_up_steps", comment: ""),
+            NSLocalizedString("question_going_down_steps", comment: ""),
+            NSLocalizedString("question_walking_narrow", comment: ""),
+            NSLocalizedString("question_walking_open", comment: ""),
+            NSLocalizedString("question_walking_crowds", comment: ""),
+            NSLocalizedString("question_using_elevator", comment: ""),
+            NSLocalizedString("question_using_escalator", comment: ""),
+            NSLocalizedString("question_driving", comment: ""),
+            NSLocalizedString("question_carrying_things", comment: ""),
+            NSLocalizedString("question_light_chores", comment: ""),
+            NSLocalizedString("question_heavy_chores", comment: ""),
+            NSLocalizedString("question_active_recreation", comment: ""),
+            NSLocalizedString("question_occupational_role", comment: ""),
+            NSLocalizedString("question_travelling", comment: "")
+        ]
+    }
     
     private var ratingDescriptions: [Int: String] {
         [
@@ -92,7 +96,7 @@ struct Questions: View {
                 
                 VStack(spacing: 17) {
                     // "Previous" button
-                    Button("Previous") {
+                    Button(NSLocalizedString("Previous", comment: "")) {
                         if currentQuestionIndex > 0 {
                             currentQuestionIndex -= 1
                             sliderValue = Double(answers[currentQuestionIndex] > 0 ? answers[currentQuestionIndex] : 1)
@@ -104,20 +108,20 @@ struct Questions: View {
                     .frame(height: 44)
                     
                     if currentQuestionIndex < questions.count - 1 {
-                        Button("Next") {
+                        Button(NSLocalizedString("next", comment: "Next")) {
                             currentQuestionIndex += 1
                             sliderValue = Double(answers[currentQuestionIndex] > 0 ? answers[currentQuestionIndex] : 1)
                         }
                         .buttonStyle(AppButtonStyle())
                     } else {
-                        Button("Submit") {
+                        Button(NSLocalizedString("Submit", comment: "")) {
                             saveAnswers()
                             dismiss() // Navigate back to the QuestionnaireIntro
                         }
                         .buttonStyle(AppButtonStyle(backgroundColor: .green))
                     }
 
-                    Button("Save and Return") {
+                    Button(NSLocalizedString("Save and Return", comment: "")) {
                         saveTemporaryAnswers()
                         dismiss() // Navigate back to the QuestionnaireIntro
                     }
