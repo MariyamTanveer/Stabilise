@@ -11,6 +11,33 @@
         }
       }
     },
+    "%lld%% - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%% - %2$@"
+          }
+        }
+      }
+    },
+    "almost_fell" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completed but almost fell"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikerült, de majdnem elestem"
+          }
+        }
+      }
+    },
     "back" : {
       "comment" : "Back Button",
       "localizations" : {
@@ -45,6 +72,23 @@
         }
       }
     },
+    "couldnt_do" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t do it at all"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Egyáltalán nem sikerült elvégezni"
+          }
+        }
+      }
+    },
     "daily_vadl_assessment" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -75,6 +119,74 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gyakorlat"
+          }
+        }
+      }
+    },
+    "exercise_eyes_close" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stand with feet together and eyes closed for 30 seconds. Repeat 5 times."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Állj meg zárt lábbal és csukott szemmel 30 másodpercig. Ismételd meg 5 alkalommal."
+          }
+        }
+      }
+    },
+    "exercise_eyes_open" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stand with feet together and eyes open for 30 seconds. Repeat 5 times."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Állj meg zárt lábbal és nyitott szemmel 30 másodpercig. Ismételd meg 5 alkalommal."
+          }
+        }
+      }
+    },
+    "exercise_heading" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exercise"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testmozgás"
+          }
+        }
+      }
+    },
+    "exercise_intro_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please make sure your therapy device is turned on.Perform each exercise 5 times for approximately 30 seconds.\n\nRate your experience on a scale of 0%-100% in order of decreasing difficulty from left to right.\n1 = Couldn’t do it at all\n2 = Completed but almost fell\n3 = Completed but with significant difficulty (sway)\n4 = Completed with slight difficulty (sway)\n5 = Completed without problems"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Kérjük, győződjön meg róla, hogy a terápiás készülék be van kapcsolva. Minden gyakorlatot végezzen el 5 alkalommal, körülbelül 30 másodpercig.\n\nÉrtékelje tapasztalatát egy 1-től 5-ig terjedő skálán, a nehézségi szint csökkenő sorrendjében balról jobbra.\n1 = Egyáltalán nem sikerült elvégezni\n2 = Sikerült, de majdnem elestem\n3 = Sikerült, de jelentős nehézségekkel (ingadozás)\n4 = Sikerült, kisebb nehézségekkel (ingadozás)\n5 = Sikerült probléma nélkül"
           }
         }
       }
@@ -825,12 +937,57 @@
         }
       }
     },
+    "significant_difficulty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completed but with significant difficulty (sway)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikerült, de jelentős nehézségekkel (ingadozás)"
+          }
+        }
+      }
+    },
+    "slight_difficulty" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completed with slight difficulty (sway)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikerült, kisebb nehézségekkel (ingadozás)"
+          }
+        }
+      }
+    },
     "Submit" : {
       "localizations" : {
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beküldés"
+          }
+        }
+      }
+    },
+    "without_problems" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completed without problems"
           }
         }
       }

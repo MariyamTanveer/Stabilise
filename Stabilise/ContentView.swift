@@ -20,9 +20,9 @@ struct ContentView: View {
                 }
                 .buttonStyle(AppButtonStyle())
 
-                // Other buttons remain as is
-                Button(NSLocalizedString("Exercise", comment: "Exercise button")) {
-                    print("Exercise button pressed")
+                // Navigation Link for Exercise
+                NavigationLink(destination: ExerciseIntro()) {
+                    Text(NSLocalizedString("Exercise", comment: "Exercise button"))
                 }
                 .buttonStyle(AppButtonStyle())
 
