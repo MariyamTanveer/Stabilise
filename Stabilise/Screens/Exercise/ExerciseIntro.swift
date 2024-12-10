@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionnaireIntro: View {
+struct ExerciseIntro: View {
     @State private var sliderValue: Double = 2.0 // Default value
     @State private var isResumeAvailable: Bool = false // Tracks if resume is available
     @State private var temporaryStorageKey: String = "" // Dynamically set temporary key
@@ -15,27 +15,22 @@ struct QuestionnaireIntro: View {
     // Rating Descriptions
     private var ratingDescriptions: [Int: String] {
         [
-            1: NSLocalizedString("rating_independent", comment: ""),
-            2: NSLocalizedString("rating_uncomfortable", comment: ""),
-            3: NSLocalizedString("rating_decreased_ability", comment: ""),
-            4: NSLocalizedString("rating_slower_cautious", comment: ""),
-            5: NSLocalizedString("rating_prefer_object", comment: ""),
-            6: NSLocalizedString("rating_must_object", comment: ""),
-            7: NSLocalizedString("rating_special_equipment", comment: ""),
-            8: NSLocalizedString("rating_physical_assistance", comment: ""),
-            9: NSLocalizedString("rating_dependent", comment: ""),
-            10: NSLocalizedString("rating_too_difficult", comment: "")
+            1: NSLocalizedString("couldnt_do", comment: ""),
+            2: NSLocalizedString("almost_fell", comment: ""),
+            3: NSLocalizedString("significant_difficulty", comment: ""),
+            4: NSLocalizedString("slight_difficulty", comment: ""),
+            5: NSLocalizedString("without_problems", comment: ""),
         ]
     }
     
     // Function to create attributed text with bold numbers
     private func attributedIntroText() -> AttributedString {
         var attributedString = AttributedString(
-            NSLocalizedString("questionnaire_intro_text", comment: "")
+            NSLocalizedString("exercise_intro_text", comment: "")
         )
         
-        // Bold each number (1, 2, 3, ..., 10)
-        for number in 1...10 {
+        // Bold each number (1, 2, 3, ..., 5)
+        for number in 1...5 {
             if let range = attributedString.range(of: "\(number) =") {
                 attributedString[range].font = .boldSystemFont(ofSize: 18) // Bold the number and '='
             }
@@ -52,7 +47,7 @@ struct QuestionnaireIntro: View {
     private func checkForTemporaryAnswers() {
         isResumeAvailable = false
         // Get today's date as a formatted string
-        let todayKey = "TemporaryAnswers-\(Date().formatted(date: .numeric, time: .omitted))"
+        let todayKey = "ExerciseDraft-\(Date().formatted(date: .numeric, time: .omitted))"
         temporaryStorageKey = todayKey // Set the temporary key
         
         // Check if the key exists in UserDefaults
@@ -64,7 +59,7 @@ struct QuestionnaireIntro: View {
     var body: some View {
             VStack(spacing: 10) {
                 
-                Text(NSLocalizedString("daily_vadl_assessment", comment: ""))
+                Text(NSLocalizedString("exercise_heading", comment: ""))
                     .modifier(TextStyles.styledHeadline())
                 
                 // Small Date Below the Title
@@ -83,12 +78,16 @@ struct QuestionnaireIntro: View {
                 }
                 
                 VStack(spacing: 15) {
-                    // Display Rating Text
-                    Text("\(Int(sliderValue)) - \(ratingDescriptions[Int(sliderValue)] ?? "")")
+                    // Calculate index for description based on slider value
+                    let descriptionIndex = min(Int(sliderValue / 20) + 1, 5) // Divides 0-100 into 5 intervals (0-20, 20-40, etc.)
+                    let description = ratingDescriptions[descriptionIndex] ?? ""
+
+                    // Display Rating Text with percentage and description
+                    Text("\(Int(sliderValue))% - \(description)")
                         .modifier(TextStyles.styledHeadline(size: 20, isBold: true))
                     
                     // Slider
-                    Slider(value: $sliderValue, in: 1...10, step: 1)
+                    Slider(value: $sliderValue, in: 0...100) // Continuous percentage slider
                         .accentColor(AppColors.secondary) // Change slider color
                         .frame(height: 40) // Adjust slider height
                         .padding(.horizontal)
@@ -96,7 +95,7 @@ struct QuestionnaireIntro: View {
                 .padding(.bottom, 10)
                 
                 VStack {
-                    NavigationLink(destination: Questions()) {
+                    NavigationLink(destination: ExerciseQuestions()) {
                         Text(isResumeAvailable ? NSLocalizedString("Resume", comment: "Resume") : NSLocalizedString("next", comment: "Next"))
                     }
                     .buttonStyle(AppButtonStyle())
@@ -116,5 +115,5 @@ struct QuestionnaireIntro: View {
     }
 
 #Preview {
-    QuestionnaireIntro()
+    ExerciseIntro()
 }
