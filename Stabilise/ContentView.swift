@@ -25,9 +25,9 @@ struct ContentView: View {
                     Text(NSLocalizedString("Exercise", comment: "Exercise button"))
                 }
                 .buttonStyle(AppButtonStyle())
-
-                Button(NSLocalizedString("Falls_diary", comment: "Falls Diary button")) {
-                    print("Falls Diary button pressed")
+                
+                NavigationLink(destination: FallsDiaryIntro()) {
+                    Text(NSLocalizedString("Falls_diary", comment: "Falls Diary button"))
                 }
                 .buttonStyle(AppButtonStyle())
 
