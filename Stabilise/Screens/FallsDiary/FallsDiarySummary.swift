@@ -1,18 +1,21 @@
 import SwiftUI
 
 struct FallsDiarySummary: View {
+    var recordData: [String: Any]? // Optional for handling both draft and saved records
+    var isDraft: Bool = true       // Flag to control the Submit button visibility
+
     @State private var draftData: [String: Any] = [:]
     @State private var showAlert = false
-    @State private var navigationPath: [NavigationDestination] = [] // For programmatic navigation
-    
+    @State private var navigationPath: [NavigationDestination] = []
+
     var body: some View {
         NavigationStack(path: $navigationPath) {
             VStack {
                 Text("Summary")
                     .modifier(TextStyles.styledHeadline())
-                
+
                 Spacer()
-                
+
                 if !draftData.isEmpty {
                     VStack(alignment: .leading, spacing: 40) {
                         SummaryRow(title: "Date", value: draftData["date"] as? String ?? "")
@@ -20,7 +23,7 @@ struct FallsDiarySummary: View {
                         SummaryRow(title: "Event", value: draftData["event"] as? String ?? "")
                         SummaryRow(title: "Activity", value: draftData["activity"] as? String ?? "")
                         SummaryRow(title: "Mechanism", value: draftData["mechanism"] as? String ?? "")
-                        SummaryRow(title: "CG Therapy", value: (draftData["cgstate"] as? Int == 1) ? "On" : "Off")
+                        SummaryRow(title: "CG Therapy", value: (draftData["cgState"] as? Int == 1) ? "On" : "Off")
                     }
                     .padding()
                     .background(AppColors.textBackground)
@@ -28,29 +31,31 @@ struct FallsDiarySummary: View {
                     .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 5)
                     .padding(.horizontal)
                 } else {
-                    Text("No draft data available.")
+                    Text("No data available.")
                         .font(.body)
                         .foregroundColor(.gray)
                 }
-                
+
                 Spacer()
-                
+
                 VStack {
-                    Button(action: submitRecord) {
-                        Text(NSLocalizedString("Submit", comment: "Submit"))
+                    if isDraft {
+                        Button(action: submitRecord) {
+                            Text(NSLocalizedString("Submit", comment: "Submit"))
+                        }
+                        .buttonStyle(AppButtonStyle())
+                        .alert(isPresented: $showAlert) {
+                            Alert(
+                                title: Text("Record Submitted"),
+                                message: Text("The record has been successfully submitted."),
+                                dismissButton: .default(Text("OK"), action: {
+                                    navigationPath.append(.intro)
+                                })
+                            )
+                        }
                     }
-                    .buttonStyle(AppButtonStyle())
-                    .alert(isPresented: $showAlert) {
-                        Alert(
-                            title: Text("Record Submitted"),
-                            message: Text("The record has been successfully submitted."),
-                            dismissButton: .default(Text("OK"), action: {
-                                navigationPath.append(.intro) // Navigate to FallsDiaryIntro
-                            })
-                        )
-                    }
-                    
-                    NavigationLink(value: NavigationDestination.questions) {
+
+                    NavigationLink(value: NavigationDestination.intro) {
                         Text(NSLocalizedString("Back", comment: "Back Button"))
                     }
                     .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
@@ -58,7 +63,11 @@ struct FallsDiarySummary: View {
                 .padding(.bottom, 1)
             }
             .onAppear {
-                fetchDraftFallsDiaryData()
+                if let recordData = recordData {
+                    draftData = recordData // For saved records
+                } else {
+                    fetchDraftFallsDiaryData() // For drafts
+                }
             }
             .padding()
             .navigationDestination(for: NavigationDestination.self) { destination in
@@ -71,45 +80,41 @@ struct FallsDiarySummary: View {
             }
         }
     }
-    
-    // fetch draft data
+
+    // Fetch draft data
     func fetchDraftFallsDiaryData() {
         let defaults = UserDefaults.standard
         let keys = defaults.dictionaryRepresentation().keys
-        var fetchedData: [String: Any] = [:]
 
         for key in keys where key.hasPrefix("draft_falls_diary") {
             if let value = defaults.object(forKey: key) as? [String: Any] {
-                fetchedData = value
+                draftData = value
                 break
             }
         }
-
-        DispatchQueue.main.async {
-            draftData = fetchedData
-        }
     }
-    
+
+    // Submit draft record
     func submitRecord() {
         guard !draftData.isEmpty else { return }
-        
+
         let defaults = UserDefaults.standard
-        
-        // Remove draft data
+
+        // Remove draft
         for key in defaults.dictionaryRepresentation().keys where key.hasPrefix("draft_falls_diary") {
             defaults.removeObject(forKey: key)
         }
-        
-        // Save with new key
+
+        // Save as a final record
         if let date = draftData["date"] as? String, let time = draftData["time"] as? String {
             let newKey = "Falls_diary_\(date)_\(time)"
             defaults.set(draftData, forKey: newKey)
         }
-        
-        // Show the alert
+
         showAlert = true
     }
 }
+
 
 enum NavigationDestination: Hashable {
     case intro

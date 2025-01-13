@@ -34,13 +34,19 @@ struct FallsDiaryQuestions: View {
             .padding(.bottom, 10)
             
             VStack {
-                Button(action: validateAndSave) {
+                /* Button(action: validateAndSave) {
                     Text("Save")
                 }
                 .buttonStyle(AppButtonStyle())
                 .alert(isPresented: $showAlert) {
                     Alert(title: Text("Incomplete Form"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                } */
+                
+                NavigationLink(destination: FallsDiarySummary()) {
+                    Text(NSLocalizedString("Save", comment: ""))
                 }
+                .buttonStyle(AppButtonStyle(backgroundColor: AppColors.primary))
+
                 
                 NavigationLink(destination: FallsDiaryIntro()) {
                     Text(NSLocalizedString("back", comment: "Back Button"))
