@@ -55,6 +55,9 @@
         }
       }
     },
+    "CG Therapy State" : {
+
+    },
     "Clinicians_portal" : {
       "comment" : "Clinician's button",
       "localizations" : {
@@ -105,6 +108,9 @@
           }
         }
       }
+    },
+    "Date" : {
+
     },
     "Exercise" : {
       "comment" : "Exercise button",
@@ -191,6 +197,9 @@
         }
       }
     },
+    "Falls Diary" : {
+
+    },
     "Falls_diary" : {
       "comment" : "Falls Diary button",
       "localizations" : {
@@ -207,6 +216,9 @@
           }
         }
       }
+    },
+    "Hello, World!" : {
+
     },
     "next" : {
       "comment" : "Next",

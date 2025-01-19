@@ -7,8 +7,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var navPath: [String] = []
+
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navPath) {
             VStack(spacing: 10) { // Use VStack for vertical alignment
                 HeaderView(text: "Stabilise")
 
@@ -25,9 +27,9 @@ struct ContentView: View {
                     Text(NSLocalizedString("Exercise", comment: "Exercise button"))
                 }
                 .buttonStyle(AppButtonStyle())
-
-                Button(NSLocalizedString("Falls_diary", comment: "Falls Diary button")) {
-                    print("Falls Diary button pressed")
+                
+                NavigationLink(destination: FallsDiaryIntro()) {
+                    Text(NSLocalizedString("Falls_diary", comment: "Falls Diary button"))
                 }
                 .buttonStyle(AppButtonStyle())
 
