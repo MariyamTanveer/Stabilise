@@ -10,6 +10,9 @@ struct FallsDiaryQuestions: View {
     @State private var cgTherapyState = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @State private var showDetails = false
+    
+    @Environment(\.presentationMode) var presentationMode  // For dismissing the view
     
     var body: some View {
         VStack(spacing: 20) {
@@ -34,22 +37,19 @@ struct FallsDiaryQuestions: View {
             .padding(.bottom, 10)
             
             VStack {
-                /* Button(action: validateAndSave) {
-                    Text("Save")
-                }
-                .buttonStyle(AppButtonStyle())
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Incomplete Form"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                } */
-                
-                NavigationLink(destination: FallsDiarySummary()) {
-                    Text(NSLocalizedString("Save", comment: ""))
+                Button("Save") {
+                    showDetails = true;
+                    saveDraft();
                 }
                 .buttonStyle(AppButtonStyle(backgroundColor: AppColors.primary))
-
+                .navigationDestination(isPresented: $showDetails) {
+                    FallsDiarySummary()
+                }
                 
-                NavigationLink(destination: FallsDiaryIntro()) {
-                    Text(NSLocalizedString("back", comment: "Back Button"))
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()  // Dismiss to go back
+                }) {
+                    Text(NSLocalizedString("Back", comment: "Back Button"))
                 }
                 .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                 
@@ -110,6 +110,7 @@ struct FallsDiaryQuestions: View {
         }
     }
 }
+
 
 #Preview {
     FallsDiaryQuestions()

@@ -7,8 +7,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var navPath: [String] = []
+
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navPath) {
             VStack(spacing: 10) { // Use VStack for vertical alignment
                 HeaderView(text: "Stabilise")
 

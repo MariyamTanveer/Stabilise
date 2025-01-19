@@ -6,79 +6,75 @@ struct FallsDiarySummary: View {
 
     @State private var draftData: [String: Any] = [:]
     @State private var showAlert = false
-    @State private var navigationPath: [NavigationDestination] = []
+    @State private var isShowingNextDestination: Bool = false
 
+    @Environment(\.presentationMode) var presentationMode  // For dismissing the view
+    
     var body: some View {
-        NavigationStack(path: $navigationPath) {
+        VStack {
+            Text("Summary")
+                .modifier(TextStyles.styledHeadline())
+
+            Spacer()
+
+            if !draftData.isEmpty {
+                VStack(alignment: .leading, spacing: 40) {
+                    SummaryRow(title: "Date", value: draftData["date"] as? String ?? "")
+                    SummaryRow(title: "Time", value: draftData["time"] as? String ?? "")
+                    SummaryRow(title: "Event", value: draftData["event"] as? String ?? "")
+                    SummaryRow(title: "Activity", value: draftData["activity"] as? String ?? "")
+                    SummaryRow(title: "Mechanism", value: draftData["mechanism"] as? String ?? "")
+                    SummaryRow(title: "CG Therapy", value: (draftData["cgState"] as? Int == 1) ? "On" : "Off")
+                }
+                .padding()
+                .background(AppColors.textBackground)
+                .cornerRadius(20)
+                .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 5)
+                .padding(.horizontal)
+            } else {
+                Text("No data available.")
+                    .font(.body)
+                    .foregroundColor(.gray)
+            }
+
+            Spacer()
+
             VStack {
-                Text("Summary")
-                    .modifier(TextStyles.styledHeadline())
-
-                Spacer()
-
-                if !draftData.isEmpty {
-                    VStack(alignment: .leading, spacing: 40) {
-                        SummaryRow(title: "Date", value: draftData["date"] as? String ?? "")
-                        SummaryRow(title: "Time", value: draftData["time"] as? String ?? "")
-                        SummaryRow(title: "Event", value: draftData["event"] as? String ?? "")
-                        SummaryRow(title: "Activity", value: draftData["activity"] as? String ?? "")
-                        SummaryRow(title: "Mechanism", value: draftData["mechanism"] as? String ?? "")
-                        SummaryRow(title: "CG Therapy", value: (draftData["cgState"] as? Int == 1) ? "On" : "Off")
+                if isDraft {
+                    Button(action: submitRecord) {
+                        Text(NSLocalizedString("Submit", comment: "Submit"))
                     }
-                    .padding()
-                    .background(AppColors.textBackground)
-                    .cornerRadius(20)
-                    .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 5)
-                    .padding(.horizontal)
-                } else {
-                    Text("No data available.")
-                        .font(.body)
-                        .foregroundColor(.gray)
+                    .buttonStyle(AppButtonStyle())
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Record Submitted"),
+                            message: Text("The record has been successfully submitted."),
+                            dismissButton: .default(Text("OK"), action: {
+                                isShowingNextDestination = true
+                            })
+                        )
+                    }.navigationDestination(isPresented: $isShowingNextDestination) {
+                        FallsDiaryIntro()
+                    }
                 }
 
-                Spacer()
-
-                VStack {
-                    if isDraft {
-                        Button(action: submitRecord) {
-                            Text(NSLocalizedString("Submit", comment: "Submit"))
-                        }
-                        .buttonStyle(AppButtonStyle())
-                        .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("Record Submitted"),
-                                message: Text("The record has been successfully submitted."),
-                                dismissButton: .default(Text("OK"), action: {
-                                    navigationPath.append(.intro)
-                                })
-                            )
-                        }
-                    }
-
-                    NavigationLink(value: NavigationDestination.intro) {
-                        Text(NSLocalizedString("Back", comment: "Back Button"))
-                    }
-                    .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()  // Dismiss to go back
+                }) {
+                    Text(NSLocalizedString("Back", comment: "Back Button"))
                 }
-                .padding(.bottom, 1)
+                .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
             }
-            .onAppear {
-                if let recordData = recordData {
-                    draftData = recordData // For saved records
-                } else {
-                    fetchDraftFallsDiaryData() // For drafts
-                }
-            }
-            .padding()
-            .navigationDestination(for: NavigationDestination.self) { destination in
-                switch destination {
-                case .intro:
-                    FallsDiaryIntro()
-                case .questions:
-                    FallsDiaryQuestions()
-                }
+            .padding(.bottom, 1)
+        }
+        .onAppear {
+            if let recordData = recordData {
+                draftData = recordData // For saved records
+            } else {
+                fetchDraftFallsDiaryData() // For drafts
             }
         }
+        .padding()
     }
 
     // Fetch draft data
