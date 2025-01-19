@@ -88,10 +88,10 @@ struct FallsDiaryQuestions: View {
         let draftData: [String: Any] = [
             "date": dateString,
             "time": timeString,
-            "event": eventType,
-            "environment": environment,
-            "activity": activity,
-            "mechanism": fallMechanism,
+            "event": eventType == "Select event type" ? "NA" : eventType,
+            "environment": environment == "Select environment" ? "NA" : environment,
+            "activity": activity == "Select activity" ? "NA" : activity,
+            "mechanism": fallMechanism == "Select mechanism" ? "NA" : fallMechanism,
             "cgstate": cgTherapyState
         ]
         

@@ -23,8 +23,19 @@ struct FallsDiaryIntro: View {
             ScrollView {
                 VStack(spacing: 16) {
                     ForEach(fallRecords) { record in
-                        FallCardView(record: record) {
-                            deleteFallRecord(record)
+                        NavigationLink(
+                            destination: FallsDiarySummary(
+                            recordData: ["event": record.event, "date": record.date,
+                                         "time": record.time, "mechanism": record.mechanism,
+                                         "activity": record.activity, "cgState": record.cgState,
+                                         "environment": record.environment],
+                            isDraft: false
+                            )
+                        ) {
+                            FallCardView(
+                                record: record,
+                                onDelete: { deleteFallRecord(record) }
+                            )
                         }
                     }
                 }
@@ -96,6 +107,13 @@ struct FallsDiaryIntro: View {
 
         // Remove from the in-memory list
         fallRecords.removeAll { $0 == record }
+    }
+    
+    func navigateToSummary(record: FallRecord) -> some View {
+        FallsDiarySummary(
+            recordData: ["event": record.event, "date": record.date],
+            isDraft: false // Indicates this is a submitted record
+        )
     }
 }
 
