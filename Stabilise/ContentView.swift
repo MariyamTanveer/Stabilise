@@ -28,15 +28,18 @@ struct ContentView: View {
                 }
                 .buttonStyle(AppButtonStyle())
                 
+                // Navigation Link for Falls diary
                 NavigationLink(destination: FallsDiaryIntro()) {
                     Text(NSLocalizedString("Falls_diary", comment: "Falls Diary button"))
                 }
                 .buttonStyle(AppButtonStyle())
 
-                Button(NSLocalizedString("Clinicians_portal", comment: "Clinician's button")) {
-                    print("Clinician's button pressed")
+                // Navigation Link for Clinicians portal
+                NavigationLink(destination: PortalIntro()) {
+                    Text(NSLocalizedString("Clinicians_portal", comment: ""))
                 }
                 .buttonStyle(AppButtonStyle())
+
 
                 Spacer() // Pushes content down to center buttons
             }
