@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "aws-crt-swift",
+        "repositoryURL": "https://github.com/awslabs/aws-crt-swift",
+        "state": {
+          "branch": null,
+          "revision": "5a65eb60edbd080a8a79af813a5bb6e5ff387550",
+          "version": "0.43.0"
+        }
+      },
+      {
+        "package": "aws-sdk-swift",
+        "repositoryURL": "https://github.com/awslabs/aws-sdk-swift",
+        "state": {
+          "branch": null,
+          "revision": "8125e4f0ed27550555657f9194ba12e39cb207d4",
+          "version": "1.2.12"
+        }
+      },
+      {
+        "package": "smithy-swift",
+        "repositoryURL": "https://github.com/smithy-lang/smithy-swift",
+        "state": {
+          "branch": null,
+          "revision": "524c8ef95ae9826ceacc328c92a20a60766a2bf8",
+          "version": "0.112.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "96a2f8a0fa41e9e09af4585e2724c4e825410b91",
+          "version": "1.6.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

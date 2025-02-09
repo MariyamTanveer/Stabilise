@@ -45,8 +45,8 @@ struct PortalDetails: View {
             Spacer()
             
             VStack {
-                Button(NSLocalizedString("Settings", comment: "")) {
-                    print("Settings button pressed")
+                NavigationLink(destination: SettingsView()) {
+                    Text(NSLocalizedString("Settings", comment: ""))
                 }
                 .buttonStyle(AppButtonStyle())
 

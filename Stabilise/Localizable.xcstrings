@@ -24,6 +24,9 @@
     "Add" : {
 
     },
+    "All Time" : {
+
+    },
     "almost_fell" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -121,7 +124,16 @@
     "Date" : {
 
     },
+    "Edit" : {
+
+    },
+    "End Date" : {
+
+    },
     "Enter Password" : {
+
+    },
+    "Enter Patient ID" : {
 
     },
     "Exercise" : {
@@ -209,6 +221,21 @@
         }
       }
     },
+    "Export All Data" : {
+
+    },
+    "Export Data" : {
+
+    },
+    "Export Exercises" : {
+
+    },
+    "Export Falls Diary" : {
+
+    },
+    "Export Questionnaire" : {
+
+    },
     "Falls Diary" : {
 
     },
@@ -259,6 +286,12 @@
 
     },
     "Password" : {
+
+    },
+    "Password is incorrect" : {
+
+    },
+    "Patient ID" : {
 
     },
     "Previous" : {
@@ -979,6 +1012,12 @@
         }
       }
     },
+    "Set" : {
+
+    },
+    "Settings" : {
+
+    },
     "significant_difficulty" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1012,6 +1051,9 @@
           }
         }
       }
+    },
+    "Start Date" : {
+
     },
     "Submit" : {
       "comment" : "Submit",

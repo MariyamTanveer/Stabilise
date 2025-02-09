@@ -4,6 +4,7 @@
 //
 //  Created by Mariyam Taveer on 05.02.25.
 //
+
 import SwiftUI
 
 struct ExportData: View {
@@ -20,10 +21,12 @@ struct ExportData: View {
             Spacer()
             
             VStack(spacing: 15) {
-                DatePicker("Start Date", selection: $startDate, in: ...Date(), displayedComponents: .date)
+                DatePicker("Start Date", selection: $startDate, in: ...endDate, displayedComponents: .date)
                     .dropDownStyle()
-                DatePicker("End Date", selection: $endDate, in: ...startDate, displayedComponents: .date)
+                    .disabled(allTimeSelected)
+                DatePicker("End Date", selection: $endDate, in: ...Date(), displayedComponents: .date)
                     .dropDownStyle()
+                    .disabled(allTimeSelected)
             }
             .padding(.bottom, 20)
             
@@ -62,6 +65,18 @@ struct ExportData: View {
                 .buttonStyle(AppButtonStyle())
                 Button(NSLocalizedString("Export Exercises", comment: "")) {
                     print("Questionnaire button pressed")
+                }
+                .buttonStyle(AppButtonStyle())
+                Button(NSLocalizedString("Sync Data", comment: "")) {
+                    print("Sync button pressed")
+                    
+                    FirestoreService.shared.syncDailyData { error in
+                        if let error = error {
+                            print("Sync failed: \(error.localizedDescription)")
+                        } else {
+                            print("Sync successful!")
+                        }
+                    }
                 }
                 .buttonStyle(AppButtonStyle())
                 Button(action: {

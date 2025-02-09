@@ -11,6 +11,8 @@ struct ExerciseIntro: View {
     @State private var sliderValue: Double = 2.0 // Default value
     @State private var isResumeAvailable: Bool = false // Tracks if resume is available
     @State private var temporaryStorageKey: String = "" // Dynamically set temporary key
+    @Environment(\.presentationMode) var presentationMode  // For dismissing the view
+
     
     // Rating Descriptions
     private var ratingDescriptions: [Int: String] {
@@ -100,8 +102,11 @@ struct ExerciseIntro: View {
                     }
                     .buttonStyle(AppButtonStyle())
                                         
-                    NavigationLink(destination: ContentView()) {
-                        Text(NSLocalizedString("back", comment: "Back Button"))
+                    // Back button
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text(NSLocalizedString("Back", comment: "Back Button"))
                     }
                     .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                 }

@@ -1,3 +1,11 @@
+//
+//  SettingsView.swift
+//  Stabilise
+//
+//  Created by Mariyam Taveer on 09.02.25.
+//
+
+
 import SwiftUI
 
 struct SettingsView: View {
@@ -5,92 +13,83 @@ struct SettingsView: View {
     @State private var questionnaireTime: Date = Date()
     @State private var exerciseTime: Date = Date()
     @State private var automaticActivityDetection = false
+    @State private var selectedLanguage = "English" // Default language
+    @Environment(\.presentationMode) var presentationMode
+    let languages = ["English", "Hungarian"]
     
     var body: some View {
         VStack {
-            // Title
-            Text("Stabilise")
-                .font(.largeTitle)
-                .bold()
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color(red: 184/255, green: 127/255, blue: 105/255))
-                .foregroundColor(.white)
-            
+            Text("Settings")
+                .modifier(TextStyles.styledHeadline())
+
             Spacer()
             
             // Settings Options
             VStack(spacing: 16) {
-                HStack {
-                    Text("Banner Notification")
-                    Spacer()
-                    Toggle("", isOn: $bannerNotification)
-                        .labelsHidden()
+                Toggle(isOn: $bannerNotification) {
+                    Text("Banner Notifications")
                 }
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                .dropDownStyle()
+                DatePicker("Questionnaire", selection: $exerciseTime, displayedComponents: .hourAndMinute)
+                    .dropDownStyle()
                 
-                HStack {
-                    Text("Questionnaire")
-                    Spacer()
-                    DatePicker("", selection: $questionnaireTime, displayedComponents: .hourAndMinute)
-                        .labelsHidden()
-                }
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                DatePicker("Exercise", selection: $exerciseTime, displayedComponents: .hourAndMinute)
+                    .dropDownStyle()
                 
-                HStack {
-                    Text("Exercise")
-                    Spacer()
-                    DatePicker("", selection: $exerciseTime, displayedComponents: .hourAndMinute)
-                        .labelsHidden()
+                Toggle(isOn: $automaticActivityDetection) {
+                    Text("Automatic Activity Detection")
                 }
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
-                
-                HStack {
-                    Toggle(isOn: $automaticActivityDetection) {
-                        Text("Automatic Activity Detection")
-                    }
-                }
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
+                .dropDownStyle()
             }
             .padding(.horizontal)
+            
+            // Language Selection
+            VStack(alignment: .leading) {
+                Text("Language")
+                    .modifier(TextStyles.styledHeadline())
+                HStack {
+                    ForEach(languages, id: \.self) { language in
+                        Button(action: {
+                            selectedLanguage = language
+                        }) {
+                            Text(language)
+                                .font(.system(size: 22))
+                                .padding(.vertical, 8)
+                                .frame(maxWidth: .infinity)
+                                .background(selectedLanguage == language ? Color(AppColors.primary) : Color.clear)
+                                .foregroundColor(selectedLanguage == language ? .white : .black)
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.gray, lineWidth: 1)
+                                )
+                        }
+                    }
+                }
+            }
+            .padding()
             
             Spacer()
             
             // Buttons
             VStack {
-                Button(action: {
-                    // Save action
-                }) {
-                    Text("Save Changes")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color(red: 102/255, green: 63/255, blue: 58/255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                Button("Save") {
                 }
+                .buttonStyle(AppButtonStyle(backgroundColor: AppColors.primary))                
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()  // Dismiss to go back
+                }) {
+                    Text(NSLocalizedString("Back", comment: "Back Button"))
+                }
+                .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                 
-                Button(action: {
-                    // Go back action
-                }) {
-                    Text("Back")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color(red: 184/255, green: 127/255, blue: 105/255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
             }
-            .padding(.horizontal)
+            .padding(.bottom, 1)
+            .padding()
         }
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
+#Preview {
+    SettingsView()
 }

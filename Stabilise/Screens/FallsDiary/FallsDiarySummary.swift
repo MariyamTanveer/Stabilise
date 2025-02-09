@@ -102,8 +102,9 @@ struct FallsDiarySummary: View {
         }
 
         // Save as a final record
-        if let date = draftData["date"] as? String, let time = draftData["time"] as? String {
-            let newKey = "Falls_diary_\(date)_\(time)"
+        if let date = draftData["date"] as? String
+        {
+            let newKey = "Falls_diary-\(date)"
             defaults.set(draftData, forKey: newKey)
         }
 
