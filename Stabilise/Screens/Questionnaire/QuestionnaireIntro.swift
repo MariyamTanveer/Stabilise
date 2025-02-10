@@ -11,6 +11,8 @@ struct QuestionnaireIntro: View {
     @State private var sliderValue: Double = 2.0 // Default value
     @State private var isResumeAvailable: Bool = false // Tracks if resume is available
     @State private var temporaryStorageKey: String = "" // Dynamically set temporary key
+    @State private var showAlert: Bool = false
+    @State private var isShowingNextDestination: Bool = false
     @Environment(\.presentationMode) var presentationMode  // For dismissing the view
     
     // Rating Descriptions
@@ -61,6 +63,20 @@ struct QuestionnaireIntro: View {
             isResumeAvailable = true
         }
     }
+    
+    private func checkIfSubmittedToday() -> Bool {
+        let date = Date().formatted(date: .numeric, time: .omitted)
+        let todayKey = "SubmittedAnswer-\(date)"
+        return UserDefaults.standard.object(forKey: todayKey) != nil
+    }
+    
+    private func handleNextButton() {
+        if checkIfSubmittedToday() {
+            showAlert = true
+        } else {
+            isShowingNextDestination = true
+        }
+    }
 
     var body: some View {
             VStack(spacing: 10) {
@@ -97,10 +113,20 @@ struct QuestionnaireIntro: View {
                 .padding(.bottom, 10)
                 
                 VStack {
-                    NavigationLink(destination: Questions()) {
+                    Button(action: handleNextButton) {
                         Text(isResumeAvailable ? NSLocalizedString("Resume", comment: "Resume") : NSLocalizedString("next", comment: "Next"))
                     }
                     .buttonStyle(AppButtonStyle())
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Already Submitted"),
+                            message: Text("A questionnaire has already been submitted today."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
+                    .navigationDestination(isPresented: $isShowingNextDestination) {
+                        Questions()
+                    }
                                         
                     // Back button
                     Button(action: {

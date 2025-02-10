@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject private var languageManager = LanguageManager()
     @State private var bannerNotification = false
     @State private var questionnaireTime: Date = Date()
     @State private var exerciseTime: Date = Date()
     @State private var automaticActivityDetection = false
-    @State private var selectedLanguage = "English" // Default language
     @Environment(\.presentationMode) var presentationMode
-    let languages = ["English", "Hungarian"]
+    let languages = ["en": "English", "hu": "Hungarian"]
     
     var body: some View {
         VStack {
@@ -48,16 +48,16 @@ struct SettingsView: View {
                 Text("Language")
                     .modifier(TextStyles.styledHeadline())
                 HStack {
-                    ForEach(languages, id: \.self) { language in
+                    ForEach(languages.keys.sorted(), id: \.self) { langCode in
                         Button(action: {
-                            selectedLanguage = language
+                            languageManager.selectedLanguage = langCode
                         }) {
-                            Text(language)
+                            Text(languages[langCode]!)
                                 .font(.system(size: 22))
                                 .padding(.vertical, 8)
                                 .frame(maxWidth: .infinity)
-                                .background(selectedLanguage == language ? Color(AppColors.primary) : Color.clear)
-                                .foregroundColor(selectedLanguage == language ? .white : .black)
+                                .background(languageManager.selectedLanguage == langCode ? Color(AppColors.primary) : Color.clear)
+                                .foregroundColor(languageManager.selectedLanguage == langCode ? .white : .black)
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)

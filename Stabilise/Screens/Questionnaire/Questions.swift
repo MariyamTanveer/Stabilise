@@ -10,9 +10,11 @@ import SwiftUI
 struct Questions: View {
     @Environment(\.dismiss) private var dismiss
     @State private var currentQuestionIndex = 0
-    @State private var answers: [Int] = Array(repeating: 0, count: 28)
+    @State private var answers: [Int] = Array(repeating: 1, count: 28)
     @State private var sliderValue: Double = 1.0
+    @State private var showPopup = false
     @State private var temporaryStorageKey: String = "TemporaryAnswers-\(Date().formatted(date: .numeric, time: .omitted))"
+    @State private var naSelected: Bool = false
     
     
     private var questions: [String] {
@@ -85,16 +87,56 @@ struct Questions: View {
                     
                     // Slider
                     Slider(value: $sliderValue, in: 1...10, step: 1)
+                        .disabled(naSelected) // Disable slider when NA is selected
                         .onChange(of: sliderValue) { oldValue, newValue in
-                            if currentQuestionIndex >= 0 && currentQuestionIndex < answers.count {
-                                answers[currentQuestionIndex] = Int(newValue)
+                            if !naSelected {  // Only update if NA is NOT selected
+                                answers[currentQuestionIndex] = max(1, Int(newValue))
                             }
                         }
                 }
                 
                 Spacer()
-                
+                                
                 VStack(spacing: 17) {
+                    
+                    // All Time Checkbox
+                    HStack {
+                        Button(action: {
+                            naSelected.toggle()
+                            if naSelected {
+                                answers[currentQuestionIndex] = 0  // Store 0 when NA is selected
+                            } else {
+                                answers[currentQuestionIndex] = max(1, Int(sliderValue)) // Restore previous value
+                            }
+                        }) {
+                            Image(systemName: naSelected ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .foregroundColor(AppColors.primary)
+                                .frame(width: 30, height: 30)
+                        }
+                        Text("NA - Not Applicable")
+                            .modifier(TextStyles.styledHeadline())
+                            .padding(.leading, 5)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showPopup = true
+                        }) {
+                            Image(systemName: "questionmark.circle.fill")
+                                .resizable()
+                                .foregroundColor(.green)
+                                .frame(width: 40, height: 40)
+                        }
+                        .sheet(isPresented: $showPopup) {
+                            Popup()
+                        }
+                        .padding(.trailing, 10)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading) // Align to left
+                    .padding(.leading, 10)
+                    .padding(.bottom, 10)
+                    
                     // "Previous" button
                     Button(NSLocalizedString("Previous", comment: "")) {
                         if currentQuestionIndex > 0 {

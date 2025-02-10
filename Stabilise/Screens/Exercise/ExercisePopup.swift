@@ -1,18 +1,15 @@
 //
-//  QuestionnaireIntro.swift
+//  ExerciseIntro 2.swift
 //  Stabilise
 //
-//  Created by Mariyam Tanveer on 17/11/2024.
+//  Created by Mariyam Taveer on 10.02.25.
 //
-
 import SwiftUI
 
-struct ExerciseIntro: View {
+struct ExercisePopup: View {
     @State private var sliderValue: Double = 2.0 // Default value
     @State private var isResumeAvailable: Bool = false // Tracks if resume is available
     @State private var temporaryStorageKey: String = "" // Dynamically set temporary key
-    @State private var showAlert: Bool = false
-    @State private var isShowingNextDestination: Bool = false
     @Environment(\.presentationMode) var presentationMode  // For dismissing the view
 
     
@@ -47,36 +44,8 @@ struct ExerciseIntro: View {
         return attributedString
     }
     
-    // Check for temporary answers in local storage
-    private func checkForTemporaryAnswers() {
-        isResumeAvailable = false
-        // Get today's date as a formatted string
-        let todayKey = "ExerciseDraft-\(Date().formatted(date: .numeric, time: .omitted))"
-        temporaryStorageKey = todayKey // Set the temporary key
-        
-        // Check if the key exists in UserDefaults
-        if UserDefaults.standard.object(forKey: todayKey) != nil {
-            isResumeAvailable = true
-        }
-    }
-    
-    private func checkIfSubmittedToday() -> Bool {
-        let date = Date().formatted(date: .numeric, time: .omitted)
-        let todayKey = "Exercise-\(date)"
-        return UserDefaults.standard.object(forKey: todayKey) != nil
-    }
-    
-    private func handleNextButton() {
-        if checkIfSubmittedToday() {
-            showAlert = true
-        } else {
-            isShowingNextDestination = true
-        }
-    }
-
     var body: some View {
             VStack(spacing: 10) {
-                
                 Text(NSLocalizedString("exercise_heading", comment: ""))
                     .modifier(TextStyles.styledHeadline())
                 
@@ -113,38 +82,20 @@ struct ExerciseIntro: View {
                 .padding(.bottom, 10)
                 
                 VStack {
-                    Button(action: handleNextButton) {
-                        Text(isResumeAvailable ? NSLocalizedString("Resume", comment: "Resume") : NSLocalizedString("next", comment: "Next"))
-                    }
-                    .buttonStyle(AppButtonStyle())
-                    .alert(isPresented: $showAlert) {
-                        Alert(
-                            title: Text("Already Submitted"),
-                            message: Text("An exercise has already been submitted today."),
-                            dismissButton: .default(Text("OK"))
-                        )
-                    }
-                    .navigationDestination(isPresented: $isShowingNextDestination) {
-                        ExerciseQuestions()
-                    }
-                                        
                     // Back button
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
                     }) {
-                        Text(NSLocalizedString("Back", comment: "Back Button"))
+                        Text(NSLocalizedString("Close", comment: ""))
                     }
                     .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                 }
                 .padding(.bottom, 1)
             }
             .padding()
-            .onAppear {
-                checkForTemporaryAnswers()
-            }
         }
     }
 
 #Preview {
-    ExerciseIntro()
+    ExercisePopup()
 }

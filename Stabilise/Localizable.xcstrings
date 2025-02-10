@@ -210,13 +210,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Please make sure your therapy device is turned on.Perform each exercise 5 times for approximately 30 seconds.\n\nRate your experience on a scale of 0%-100% in order of decreasing difficulty from left to right.\n1 = Couldn’t do it at all\n2 = Completed but almost fell\n3 = Completed but with significant difficulty (sway)\n4 = Completed with slight difficulty (sway)\n5 = Completed without problems"
+            "value" : "Please make sure your therapy device is turned on.Perform each exercise 5 times for approximately 30 seconds.\n\nRate your experience on a scale of 0%-100% in order of decreasing difficulty from left to right.\n0% = Couldn’t do it at all\nAround 25% = Completed but almost fell\nAround 50% = Completed but with significant difficulty (sway)\nAround 75% = Completed with slight difficulty (sway)\n100% = Completed without problems\n\nSelect NA if you didn’t perform the activity today."
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Kérjük, győződjön meg róla, hogy a terápiás készülék be van kapcsolva. Minden gyakorlatot végezzen el 5 alkalommal, körülbelül 30 másodpercig.\n\nÉrtékelje tapasztalatát egy 1-től 5-ig terjedő skálán, a nehézségi szint csökkenő sorrendjében balról jobbra.\n1 = Egyáltalán nem sikerült elvégezni\n2 = Sikerült, de majdnem elestem\n3 = Sikerült, de jelentős nehézségekkel (ingadozás)\n4 = Sikerült, kisebb nehézségekkel (ingadozás)\n5 = Sikerült probléma nélkül"
+            "state" : "translated",
+            "value" : "Kérjük, győződjön meg róla, hogy a terápiás készülék be van kapcsolva. Minden gyakorlatot végezzen el 5 alkalommal, körülbelül 30 másodpercig.\n\nÉrtékelje tapasztalatát egy 1-től 5-ig terjedő skálán, a nehézségi szint csökkenő sorrendjében balról jobbra.\n0% = Egyáltalán nem sikerült elvégezni\nKb. 25% = Sikerült, de majdnem elestem\nKb. 50% = Sikerült, de jelentős nehézségekkel (ingadozás)\nKb. 75% = Sikerült, kisebb nehézségekkel (ingadozás)\n100% = Sikerült probléma nélkül\n\nVálassza az NA opciót, ha ma nem végezte el a tevékenységet."
           }
         }
       }
@@ -257,7 +257,20 @@
       }
     },
     "Falls_diary_heading" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falls Diary"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esésnapló"
+          }
+        }
+      }
     },
     "Log in" : {
 
