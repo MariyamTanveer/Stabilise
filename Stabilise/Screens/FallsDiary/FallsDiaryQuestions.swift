@@ -77,9 +77,7 @@ struct FallsDiaryQuestions: View {
     }
     
     private func saveDraft() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString = dateFormatter.string(from: date)
+        let dateString = Date().formatted(date: .numeric, time: .omitted)
         
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"

@@ -127,6 +127,10 @@ struct Questions: View {
                     }
                     .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                     .frame(height: 44)
+                    
+                    Button("Clear Storage") {
+                        clearAllLocalStorage()
+                    }
                 }
             }
             .padding()
@@ -209,6 +213,17 @@ struct Questions: View {
         if let temporaryAnswers = UserDefaults.standard.dictionary(forKey: temporaryStorageKey) {
             print("\(temporaryStorageKey): \(temporaryAnswers)")
         }
+    }
+    
+    private func clearAllLocalStorage() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        
+        for key in dictionary.keys {
+            defaults.removeObject(forKey: key)
+        }
+        
+        print("All UserDefaults data cleared.")
     }
 
 }

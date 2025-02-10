@@ -153,7 +153,6 @@ struct ExerciseQuestions: View {
     }
     
     private func printUserDefaultsData() {
-        print("hhehehe")
         let keys = UserDefaults.standard.dictionaryRepresentation().keys.filter { $0.hasPrefix("Exercise-") }
         for key in keys {
             if let data = UserDefaults.standard.array(forKey: key) as? [Int] {

@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C3656B7C2D54063D00CC93D4 /* DynamoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3656B7B2D54063800CC93D4 /* DynamoDBManager.swift */; };
+		C3862E482D54192A0072992E /* AWSDynamoDB in Frameworks */ = {isa = PBXBuildFile; productRef = C3862E472D54192A0072992E /* AWSDynamoDB */; };
+		C3862E882D54328A0072992E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C3862E872D54328A0072992E /* FirebaseDatabase */; };
+		C3862E8A2D54328A0072992E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3862E892D54328A0072992E /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C36E0FE72CE795170010E27D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3656B7B2D54063800CC93D4 /* DynamoDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoDBManager.swift; sourceTree = "<group>"; };
 		C36E0FD62CE795150010E27D /* Stabilise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stabilise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36E0FE62CE795170010E27D /* StabiliseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StabiliseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36E0FF02CE795170010E27D /* StabiliseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StabiliseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,24 +69,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C36E0FD32CE795150010E27D /* Frameworks */ = {
+		C39292892D5413D000C100DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C36E0FE32CE795170010E27D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C36E0FED2CE795170010E27D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C3862E882D54328A0072992E /* FirebaseDatabase in Frameworks */,
+				C3862E482D54192A0072992E /* AWSDynamoDB in Frameworks */,
+				C3862E8A2D54328A0072992E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +89,8 @@
 				C36E0FE92CE795170010E27D /* StabiliseTests */,
 				C36E0FF32CE795170010E27D /* StabiliseUITests */,
 				C36E0FD72CE795150010E27D /* Products */,
+				C3656B7B2D54063800CC93D4 /* DynamoDBManager.swift */,
+				C39292832D540F3F00C100DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +104,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C39292832D540F3F00C100DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,8 +119,8 @@
 			buildConfigurationList = C36E0FFA2CE795180010E27D /* Build configuration list for PBXNativeTarget "Stabilise" */;
 			buildPhases = (
 				C36E0FD22CE795150010E27D /* Sources */,
-				C36E0FD32CE795150010E27D /* Frameworks */,
 				C36E0FD42CE795150010E27D /* Resources */,
+				C39292892D5413D000C100DE /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +131,9 @@
 			);
 			name = Stabilise;
 			packageProductDependencies = (
+				C3862E472D54192A0072992E /* AWSDynamoDB */,
+				C3862E872D54328A0072992E /* FirebaseDatabase */,
+				C3862E892D54328A0072992E /* FirebaseFirestore */,
 			);
 			productName = Stabilise;
 			productReference = C36E0FD62CE795150010E27D /* Stabilise.app */;
@@ -135,7 +144,6 @@
 			buildConfigurationList = C36E0FFD2CE795180010E27D /* Build configuration list for PBXNativeTarget "StabiliseTests" */;
 			buildPhases = (
 				C36E0FE22CE795170010E27D /* Sources */,
-				C36E0FE32CE795170010E27D /* Frameworks */,
 				C36E0FE42CE795170010E27D /* Resources */,
 			);
 			buildRules = (
@@ -147,8 +155,6 @@
 				C36E0FE92CE795170010E27D /* StabiliseTests */,
 			);
 			name = StabiliseTests;
-			packageProductDependencies = (
-			);
 			productName = StabiliseTests;
 			productReference = C36E0FE62CE795170010E27D /* StabiliseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -158,7 +164,6 @@
 			buildConfigurationList = C36E10002CE795180010E27D /* Build configuration list for PBXNativeTarget "StabiliseUITests" */;
 			buildPhases = (
 				C36E0FEC2CE795170010E27D /* Sources */,
-				C36E0FED2CE795170010E27D /* Frameworks */,
 				C36E0FEE2CE795170010E27D /* Resources */,
 			);
 			buildRules = (
@@ -170,8 +175,6 @@
 				C36E0FF32CE795170010E27D /* StabiliseUITests */,
 			);
 			name = StabiliseUITests;
-			packageProductDependencies = (
-			);
 			productName = StabiliseUITests;
 			productReference = C36E0FF02CE795170010E27D /* StabiliseUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -209,6 +212,10 @@
 			);
 			mainGroup = C36E0FCD2CE795150010E27D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C3862E462D54192A0072992E /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
+				C3862E862D54328A0072992E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C36E0FD72CE795150010E27D /* Products */;
 			projectDirPath = "";
@@ -250,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3656B7C2D54063D00CC93D4 /* DynamoDBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +578,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3862E462D54192A0072992E /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/awslabs/aws-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.12;
+			};
+		};
+		C3862E862D54328A0072992E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3862E472D54192A0072992E /* AWSDynamoDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3862E462D54192A0072992E /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSDynamoDB;
+		};
+		C3862E872D54328A0072992E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3862E862D54328A0072992E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		C3862E892D54328A0072992E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3862E862D54328A0072992E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C36E0FCE2CE795150010E27D /* Project object */;
 }

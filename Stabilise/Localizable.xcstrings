@@ -21,6 +21,12 @@
         }
       }
     },
+    "Add" : {
+
+    },
+    "All Time" : {
+
+    },
     "almost_fell" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -55,7 +61,13 @@
         }
       }
     },
+    "Back" : {
+      "comment" : "Back Button"
+    },
     "CG Therapy State" : {
+
+    },
+    "Clinician's Portal" : {
 
     },
     "Clinicians_portal" : {
@@ -110,6 +122,18 @@
       }
     },
     "Date" : {
+
+    },
+    "Edit" : {
+
+    },
+    "End Date" : {
+
+    },
+    "Enter Password" : {
+
+    },
+    "Enter Patient ID" : {
 
     },
     "Exercise" : {
@@ -197,6 +221,21 @@
         }
       }
     },
+    "Export All Data" : {
+
+    },
+    "Export Data" : {
+
+    },
+    "Export Exercises" : {
+
+    },
+    "Export Falls Diary" : {
+
+    },
+    "Export Questionnaire" : {
+
+    },
     "Falls Diary" : {
 
     },
@@ -217,7 +256,10 @@
         }
       }
     },
-    "Hello, World!" : {
+    "Falls_diary_heading" : {
+
+    },
+    "Log in" : {
 
     },
     "next" : {
@@ -236,6 +278,21 @@
           }
         }
       }
+    },
+    "No data available." : {
+
+    },
+    "OK" : {
+
+    },
+    "Password" : {
+
+    },
+    "Password is incorrect" : {
+
+    },
+    "Patient ID" : {
+
     },
     "Previous" : {
       "localizations" : {
@@ -928,6 +985,9 @@
         }
       }
     },
+    "Record Submitted" : {
+
+    },
     "Resume" : {
       "comment" : "Resume",
       "localizations" : {
@@ -939,6 +999,9 @@
         }
       }
     },
+    "Save" : {
+
+    },
     "Save and Return" : {
       "localizations" : {
         "hu" : {
@@ -948,6 +1011,12 @@
           }
         }
       }
+    },
+    "Set" : {
+
+    },
+    "Settings" : {
+
     },
     "significant_difficulty" : {
       "extractionState" : "manual",
@@ -983,7 +1052,11 @@
         }
       }
     },
+    "Start Date" : {
+
+    },
     "Submit" : {
+      "comment" : "Submit",
       "localizations" : {
         "hu" : {
           "stringUnit" : {
@@ -992,6 +1065,15 @@
           }
         }
       }
+    },
+    "Summary" : {
+
+    },
+    "The record has been successfully submitted." : {
+
+    },
+    "Time" : {
+
     },
     "without_problems" : {
       "extractionState" : "manual",
