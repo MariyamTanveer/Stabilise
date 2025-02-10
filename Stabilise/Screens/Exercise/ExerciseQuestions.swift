@@ -10,9 +10,11 @@ import SwiftUI
 struct ExerciseQuestions: View {
     @Environment(\.dismiss) private var dismiss
     @State private var currentQuestionIndex = 0
-    @State private var answers: [Int] = Array(repeating: 0, count: 2)
+    @State private var answers: [Int] = Array(repeating: -1, count: 2)
     @State private var sliderValue: Double = 1.0
     @State private var temporaryStorageKey: String = "ExerciseDraft-\(Date().formatted(date: .numeric, time: .omitted))"
+    @State private var showPopup = false
+    @State private var naSelected = false
     
     
     private var questions: [String] {
@@ -58,16 +60,54 @@ struct ExerciseQuestions: View {
                         .modifier(TextStyles.styledHeadline(size: 20, isBold: true))
                         .frame( width: 320, height: 60)
                     
-                    // Slider
-                    Slider(value: $sliderValue, in: 0...100) // Continuous percentage slider
-                        .accentColor(AppColors.secondary) // Change slider color
-                        .frame(height: 40) // Adjust slider height
+                    // Slider (Now Disabled when NA is Selected)
+                    Slider(value: $sliderValue, in: 0...100)
+                        .accentColor(AppColors.secondary)
+                        .frame(height: 40)
                         .padding(.horizontal)
+                        .disabled(naSelected) // Disable if NA is selected
                 }
                 
                 Spacer()
                 
                 VStack(spacing: 17) {
+                    
+                    HStack {
+                        // NA Button Action
+                        Button(action: {
+                            naSelected.toggle()
+                            if naSelected {
+                                answers[currentQuestionIndex] = -1  // Keep -1 when NA is selected
+                            } else {
+                                answers[currentQuestionIndex] = max(1, Int(sliderValue)) // Restore previous value
+                            }
+                        }) {
+                            Image(systemName: naSelected ? "checkmark.square.fill" : "square")
+                                .resizable()
+                                .foregroundColor(AppColors.primary)
+                                .frame(width: 30, height: 30)
+                        }
+                        Text("NA - Not Applicable")
+                            .modifier(TextStyles.styledHeadline())
+                            .padding(.leading, 5)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showPopup = true
+                        }) {
+                            Image(systemName: "questionmark.circle.fill")
+                                .resizable()
+                                .foregroundColor(.green)
+                                .frame(width: 40, height: 40)
+                        }
+                        .sheet(isPresented: $showPopup) {
+                            ExercisePopup()
+                        }
+                        .padding(.trailing, 10)
+                    }
+                    .padding(.bottom, 10)
+                        
                     // "Previous" button
                     Button(NSLocalizedString("Previous", comment: "")) {
                         if currentQuestionIndex > 0 {
@@ -119,11 +159,21 @@ struct ExerciseQuestions: View {
     }
     
     private func saveAnswer() {
-        answers[currentQuestionIndex] = Int(sliderValue)
+        if naSelected {
+            answers[currentQuestionIndex] = -1
+        } else {
+            answers[currentQuestionIndex] = Int(sliderValue)
+        }
     }
 
     private func loadAnswer() {
-        sliderValue = Double(answers[currentQuestionIndex])
+        let savedValue = answers[currentQuestionIndex]
+        if savedValue == -1 {
+            naSelected = true
+        } else {
+            naSelected = false
+            sliderValue = Double(savedValue)
+        }
     }
 
     private func saveDraft() {

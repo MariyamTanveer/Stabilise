@@ -14,7 +14,7 @@ struct Questions: View {
     @State private var sliderValue: Double = 1.0
     @State private var showPopup = false
     @State private var temporaryStorageKey: String = "TemporaryAnswers-\(Date().formatted(date: .numeric, time: .omitted))"
-    @State private var naSelected: Bool = true
+    @State private var naSelected: Bool = false
     
     
     private var questions: [String] {
