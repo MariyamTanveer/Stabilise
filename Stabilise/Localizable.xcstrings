@@ -21,6 +21,9 @@
         }
       }
     },
+    "A questionnaire has already been submitted today." : {
+
+    },
     "Add" : {
 
     },
@@ -44,8 +47,18 @@
         }
       }
     },
+    "Already Submitted" : {
+
+    },
+    "An exercise has already been submitted today." : {
+
+    },
+    "Automatic Activity Detection" : {
+
+    },
     "back" : {
       "comment" : "Back Button",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -64,7 +77,13 @@
     "Back" : {
       "comment" : "Back Button"
     },
+    "Banner Notifications" : {
+
+    },
     "CG Therapy State" : {
+
+    },
+    "Clear Storage" : {
 
     },
     "Clinician's Portal" : {
@@ -86,6 +105,9 @@
           }
         }
       }
+    },
+    "Close" : {
+      "comment" : "Close Button"
     },
     "couldnt_do" : {
       "extractionState" : "manual",
@@ -272,7 +294,16 @@
         }
       }
     },
+    "Language" : {
+
+    },
+    "Language Changed" : {
+
+    },
     "Log in" : {
+
+    },
+    "NA - Not Applicable" : {
 
     },
     "next" : {
@@ -305,6 +336,9 @@
 
     },
     "Patient ID" : {
+
+    },
+    "Please restart the application for changes to take effect." : {
 
     },
     "Previous" : {
@@ -1031,6 +1065,9 @@
     "Settings" : {
 
     },
+    "Settings Saved" : {
+
+    },
     "significant_difficulty" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1082,6 +1119,9 @@
     "Summary" : {
 
     },
+    "Sync Data" : {
+
+    },
     "The record has been successfully submitted." : {
 
     },
@@ -1098,6 +1138,9 @@
           }
         }
       }
+    },
+    "Your preferences have been updated." : {
+
     }
   },
   "version" : "1.0"

@@ -1,3 +1,11 @@
+//
+//  NotificationManager.swift
+//  Stabilise
+//
+//  Created by Mariyam Taveer on 13.02.25.
+//
+
+
 import Foundation
 import UserNotifications
 
@@ -5,6 +13,7 @@ class NotificationManager {
     static let shared = NotificationManager()
     
     private let notificationCenter = UNUserNotificationCenter.current()
+    private let defaults = UserDefaults.standard
     
     private init() {}
 
@@ -19,19 +28,33 @@ class NotificationManager {
     }
 
     func scheduleNotifications() {
-        let defaults = UserDefaults.standard
-        
         guard defaults.bool(forKey: "bannerNotification") else {
             print("Notifications are disabled")
             return
         }
+        
+        let todayKey = Date().formatted(date: .numeric, time: .omitted)
+        let exerciseKey = "Exercise-\(todayKey)"
+        let questionnaireKey = "SubmittedAnswer-\(todayKey)"
 
-        if let exerciseTime = defaults.object(forKey: "exerciseTime") as? Date {
-            scheduleNotification(title: "Exercise Reminder", body: "Time to exercise!", date: exerciseTime)
+        // Schedule exercise notification only if not submitted
+        if defaults.object(forKey: exerciseKey) == nil,
+           let exerciseTime = defaults.object(forKey: "exerciseTime") as? Date {
+           scheduleNotification(
+                title: "Don't skip your workout! 💪",
+                body: "You haven't exercised today. Get moving and stay active!",
+                date: exerciseTime
+            )
         }
         
-        if let questionnaireTime = defaults.object(forKey: "questionnaireTime") as? Date {
-            scheduleNotification(title: "Questionnaire Reminder", body: "Time to fill out the questionnaire!", date: questionnaireTime)
+        // Schedule questionnaire notification only if not submitted
+        if defaults.object(forKey: questionnaireKey) == nil,
+           let questionnaireTime = defaults.object(forKey: "questionnaireTime") as? Date {
+            scheduleNotification(
+                title: "Quick check-in needed! 📝",
+                body: "You haven't filled out your questionnaire today. Do it ASAP!",
+                date: questionnaireTime
+            )
         }
     }
 
