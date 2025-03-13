@@ -12,6 +12,9 @@ import Firebase
 struct StabiliseApp: App {
     init() {
         FirebaseApp.configure()
+        
+        BackgroundSyncManager.shared.registerBackgroundTask()
+        BackgroundSyncManager.shared.scheduleDailySync()
     }
     
     var body: some Scene {

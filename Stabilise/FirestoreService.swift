@@ -15,6 +15,7 @@ class FirestoreService {
     // Sync local storage data to Firestore
     func syncDailyData(completion: @escaping (Error?) -> Void) {
         let date = getCurrentDate() // Format: YYYY-MM-DD
+        print("Starting Firestore sync for \(date)")
         
         // Fetch patient ID from local storage
         guard let patientId = UserDefaults.standard.string(forKey: "patientID") else {
@@ -40,6 +41,11 @@ class FirestoreService {
         db.collection("patients").document(patientId)
             .collection("dailyEntries").document(date)
             .setData(dailyData) { error in
+                if let error = error {
+                    print("Firestore sync failed: \(error.localizedDescription)")
+                } else {
+                    print("Firestore sync successful at \(date)!")
+                }
                 completion(error)
             }
     }
