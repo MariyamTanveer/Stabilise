@@ -46,7 +46,7 @@ class BackgroundSyncManager {
     private func getNext11PMDate() -> Date {
         let calendar = Calendar.current
         let now = Date()
-        let elevenPM = calendar.date(bySettingHour: 03, minute: 11, second: 0, of: now)!
+        let elevenPM = calendar.date(bySettingHour: 23, minute: 0, second: 0, of: now)!
 
         return now > elevenPM ? calendar.date(byAdding: .day, value: 1, to: elevenPM)! : elevenPM
     }

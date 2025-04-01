@@ -28,12 +28,14 @@ class FirestoreService {
         let fallsDiary = UserDefaults.standard.dictionary(forKey: "Falls_diary-\(date)") ?? [:]
         let questionnaire = UserDefaults.standard.dictionary(forKey: "SubmittedAnswer-\(date)") ?? [:]
         let exercises = UserDefaults.standard.array(forKey: "Exercise-\(date)") as? [Int] ?? []
+        let imuData = UserDefaults.standard.array(forKey: "IMU-\(date)") as? [[String: Any]] ?? []
 
         // Prepare Firestore document
         let dailyData: [String: Any] = [
             "fallsDiary": fallsDiary,
             "questionnaire": questionnaire,
             "exercises": exercises,
+            "imu": imuData,
             "syncedAt": Timestamp()
         ]
 
@@ -51,7 +53,7 @@ class FirestoreService {
     }
 
     // Helper function to get today's date as a string
-    private func getCurrentDate() -> String {
+    func getCurrentDate() -> String {
         return Date().formatted(date: .numeric, time: .omitted)
     }
 }

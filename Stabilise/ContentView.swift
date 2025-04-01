@@ -45,6 +45,12 @@ struct ContentView: View {
             }
             .padding() // Add padding around the VStack
         }
+        .onAppear {
+            MotionManager.shared.startIMUUpdates()
+        }
+        .onDisappear {
+            MotionManager.shared.stopIMUUpdates()
+        }
     }
 }
 

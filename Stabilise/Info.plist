@@ -15,5 +15,7 @@
     <array>
         <string>com.stabilise.syncdata</string>
     </array>
+    <key>NSMotionUsageDescription</key>
+    <string>We need motion data to monitor your physical activity.</string>
 </dict>
 </plist>
