@@ -39,12 +39,28 @@ struct ContentView: View {
                     Text(NSLocalizedString("Clinicians_portal", comment: ""))
                 }
                 .buttonStyle(AppButtonStyle())
+                
+                
+                Button("Clear Storage") {
+                    clearAllLocalStorage()
+                }
 
 
                 Spacer() // Pushes content down to center buttons
             }
             .padding() // Add padding around the VStack
         }
+    }
+    
+    private func clearAllLocalStorage() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        
+        for key in dictionary.keys {
+            defaults.removeObject(forKey: key)
+        }
+        
+        print("All UserDefaults data cleared.")
     }
 }
 
