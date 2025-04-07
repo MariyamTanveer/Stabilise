@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAIPLiDsWRQsxA66mrDc3KcVfYnwPNiwgM</string>
+	<string>AIzaSyCJiSh7Hua5IvMlv0nYpAp9bRRQF5Llfeo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>444153350503</string>
+	<string>853515662432</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.tutorial.Stabilise</string>
+	<string>com.ceregate.Stabilise</string>
 	<key>PROJECT_ID</key>
-	<string>stabilise-101a6</string>
+	<string>stabilise-ceregate</string>
 	<key>STORAGE_BUCKET</key>
-	<string>stabilise-101a6.firebasestorage.app</string>
+	<string>stabilise-ceregate.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:444153350503:ios:23adcd74fa7672644f47c2</string>
+	<string>1:853515662432:ios:e20785636fd0ef9b7f3f05</string>
 </dict>
 </plist>

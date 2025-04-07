@@ -150,11 +150,16 @@ struct ExerciseQuestions: View {
             }
             .padding()
             .onAppear {
+                MotionManager.shared.startIMUUpdates()
                 loadDraft()
                 if sliderValue == 0 {
                     sliderValue = 1.0
                 }
             }
+            .onDisappear {
+                MotionManager.shared.stopIMUUpdates()
+            }
+
         }
     }
     

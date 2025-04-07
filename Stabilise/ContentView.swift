@@ -39,18 +39,28 @@ struct ContentView: View {
                     Text(NSLocalizedString("Clinicians_portal", comment: ""))
                 }
                 .buttonStyle(AppButtonStyle())
+                
+                
+                Button("Clear Storage") {
+                    clearAllLocalStorage()
+                }
 
 
                 Spacer() // Pushes content down to center buttons
             }
             .padding() // Add padding around the VStack
         }
-        .onAppear {
-            MotionManager.shared.startIMUUpdates()
+    }
+    
+    private func clearAllLocalStorage() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        
+        for key in dictionary.keys {
+            defaults.removeObject(forKey: key)
         }
-        .onDisappear {
-            MotionManager.shared.stopIMUUpdates()
-        }
+        
+        print("All UserDefaults data cleared.")
     }
 }
 

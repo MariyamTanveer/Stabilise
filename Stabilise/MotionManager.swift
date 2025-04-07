@@ -34,7 +34,7 @@ class MotionManager {
             
             self.imuData.append(entry)
 
-            // Optionally flush to disk every N entries or after a time interval
+            // flush to disk every 100 entries
             if self.imuData.count >= 100 {
                 self.saveIMUDataToLocalStorage()
                 self.imuData.removeAll()

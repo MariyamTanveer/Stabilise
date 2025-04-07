@@ -29,6 +29,7 @@ class FirestoreService {
         let questionnaire = UserDefaults.standard.dictionary(forKey: "SubmittedAnswer-\(date)") ?? [:]
         let exercises = UserDefaults.standard.array(forKey: "Exercise-\(date)") as? [Int] ?? []
         let imuData = UserDefaults.standard.array(forKey: "IMU-\(date)") as? [[String: Any]] ?? []
+        print("imuData", imuData)
 
         // Prepare Firestore document
         let dailyData: [String: Any] = [
