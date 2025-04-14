@@ -169,10 +169,6 @@ struct Questions: View {
                     }
                     .buttonStyle(AppButtonStyle(backgroundColor: AppColors.secondary))
                     .frame(height: 44)
-                    
-                    Button("Clear Storage") {
-                        clearAllLocalStorage()
-                    }
                 }
             }
             .padding()

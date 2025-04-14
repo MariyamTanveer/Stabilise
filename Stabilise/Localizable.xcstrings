@@ -56,16 +56,9 @@
     "Automatic Activity Detection" : {
 
     },
-    "back" : {
+    "Back" : {
       "comment" : "Back Button",
-      "extractionState" : "stale",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Back"
-          }
-        },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
@@ -73,9 +66,6 @@
           }
         }
       }
-    },
-    "Back" : {
-      "comment" : "Back Button"
     },
     "Banner Notifications" : {
 
@@ -101,13 +91,21 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Klinikus portálja"
+            "value" : "Klinikus portál"
           }
         }
       }
     },
     "Close" : {
-      "comment" : "Close Button"
+      "comment" : "Close Button",
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vissza"
+          }
+        }
+      }
     },
     "couldnt_do" : {
       "extractionState" : "manual",
@@ -170,7 +168,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gyakorlat"
+            "value" : "Gyakorlatok"
           }
         }
       }
@@ -273,7 +271,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Esések naplója"
+            "value" : "Elesés napló"
           }
         }
       }
@@ -304,7 +302,14 @@
 
     },
     "NA - Not Applicable" : {
-
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NA"
+          }
+        }
+      }
     },
     "next" : {
       "comment" : "Next",
@@ -781,7 +786,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Séta sík felületeken"
+            "value" : "Séta egyenletes felületen"
           }
         }
       }
@@ -832,7 +837,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Séta egyenetlen felületeken"
+            "value" : "Séta egyenetlen felületen"
           }
         }
       }
@@ -867,7 +872,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kérem, értékelje a mai tevékenységei teljesítményét egy 1-től 10-ig terjedő skálán:\n1 = Önálló\n2 = Kényelmetlen\n3 = Csökkent képesség\n4 = Lassabb, óvatos\n5 = Inkább használ segédeszközt\n6 = Muszáj használni egy tárgyat\n7 = Speciális eszköz szükséges\n8 = Fizikai segítség szükséges\n9 = Függő\n10 = Túl nehéz, már nem hajtja végre\n\nVálassza az NA opciót, ha ma nem végezte el a tevékenységet."
+            "value" : "Kérjük, értékelje a mai tevékenységek teljesítményét egy 1-től 10-ig terjedő skálán\n1 = Önállóan\n2 = Kényelmetlen\n3 = Csökkent képesség\n4 = Lassabban, óvatosan, odafigyelve\n5 = Időnként tárgyat használ segítségül\n6 = Egy tárgya kell használnia segítségül\n7 = Speciális felszerelést kell használni\n8 = Fizikai segítségre van szüksége\n9 = Önállóan nem végezhető\n10 = Túl nehéz, már nem teljesíthető\n\n Válassza az NA lehetőséget, ha ma nem végezte el a tevékenységet"
           }
         }
       }
@@ -899,7 +904,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Függő"
+            "value" : "Önállóan nem végezhető"
           }
         }
       }
@@ -915,7 +920,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Önálló"
+            "value" : "Önállóan"
           }
         }
       }
@@ -931,7 +936,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Muszáj használni egy tárgyat"
+            "value" : "Egy tárgya kell használnia segítségül"
           }
         }
       }
@@ -947,7 +952,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Fizikai segítség szükséges"
+            "value" : "Fizikai segítségre van szüksége"
           }
         }
       }
@@ -963,7 +968,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inkább használ segédeszközt"
+            "value" : "Időnként tárgyat használ segítségül"
           }
         }
       }
@@ -979,7 +984,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lassabb, óvatos"
+            "value" : "Lassabban, óvatosan, odafigyelve"
           }
         }
       }
@@ -995,7 +1000,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Speciális eszköz szükséges"
+            "value" : "Speciális felszerelést kell használni"
           }
         }
       }
@@ -1011,7 +1016,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Túl nehéz, már nem hajtja végre"
+            "value" : "Túl nehéz, már nem teljesíthető"
           }
         }
       }
@@ -1111,7 +1116,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beküldés"
+            "value" : "Beküld"
           }
         }
       }
