@@ -12,19 +12,19 @@ struct FallsDiarySummary: View {
     
     var body: some View {
         VStack {
-            Text("Summary")
+            Text(NSLocalizedString("Summary", comment: ""))
                 .modifier(TextStyles.styledHeadline())
 
             Spacer()
 
             if !draftData.isEmpty {
                 VStack(alignment: .leading, spacing: 40) {
-                    SummaryRow(title: "Date", value: draftData["date"] as? String ?? "")
-                    SummaryRow(title: "Time", value: draftData["time"] as? String ?? "")
-                    SummaryRow(title: "Event", value: draftData["event"] as? String ?? "")
-                    SummaryRow(title: "Activity", value: draftData["activity"] as? String ?? "")
-                    SummaryRow(title: "Mechanism", value: draftData["mechanism"] as? String ?? "")
-                    SummaryRow(title: "CG Therapy", value: (draftData["cgState"] as? Int == 1) ? "On" : "Off")
+                    SummaryRow(title: NSLocalizedString("date", comment: ""), value: draftData["date"] as? String ?? "")
+                    SummaryRow(title: NSLocalizedString("time", comment: ""), value: draftData["time"] as? String ?? "")
+                    SummaryRow(title: NSLocalizedString("event", comment: ""), value: draftData["event"] as? String ?? "")
+                    SummaryRow(title: NSLocalizedString("activity", comment: ""), value: draftData["activity"] as? String ?? "")
+                    SummaryRow(title: NSLocalizedString("mechanism", comment: ""), value: draftData["mechanism"] as? String ?? "")
+                    SummaryRow(title: NSLocalizedString("cg_therapy_state", comment: ""), value: (draftData["cgState"] as? Int == 1) ? "On" : "Off")
                 }
                 .padding()
                 .background(AppColors.textBackground)
@@ -32,7 +32,7 @@ struct FallsDiarySummary: View {
                 .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 5)
                 .padding(.horizontal)
             } else {
-                Text("No data available.")
+                Text(NSLocalizedString("no_data_available", comment: ""))
                     .font(.body)
                     .foregroundColor(.gray)
             }
@@ -47,7 +47,7 @@ struct FallsDiarySummary: View {
                     .buttonStyle(AppButtonStyle())
                     .alert(isPresented: $showAlert) {
                         Alert(
-                            title: Text("Record Submitted"),
+                            title: Text(NSLocalizedString("record_submitted", comment: "")),
                             message: Text("The record has been successfully submitted."),
                             dismissButton: .default(Text("OK"), action: {
                                 isShowingNextDestination = true
@@ -85,6 +85,7 @@ struct FallsDiarySummary: View {
         for key in keys where key.hasPrefix("draft_falls_diary") {
             if let value = defaults.object(forKey: key) as? [String: Any] {
                 draftData = value
+                print("fetched data", draftData)
                 break
             }
         }

@@ -75,12 +75,12 @@ struct FallsDiaryIntro: View {
         fallRecords = fallKeys.compactMap { key in
             if let value = userDefaults.dictionary(forKey: key) {
                 return FallRecord(
-                    date: value["date"] as? String ?? "Unknown Date",
-                    time: value["time"] as? String ?? "Unknown Time",
-                    event: value["event"] as? String ?? "Unknown Event",
-                    mechanism: value["mechanism"] as? String ?? "Unknown Mechanism",
-                    activity: value["activity"] as? String ?? "Unknown Activity",
-                    environment: value["environment"] as? String ?? "Unknown Environment",
+                    date: value["date"] as? String ?? NSLocalizedString("unknown_date", comment: ""),
+                    time: value["time"] as? String ?? NSLocalizedString("unknown_time", comment: ""),
+                    event: value["event"] as? String ?? NSLocalizedString("unknown_event", comment: ""),
+                    mechanism: value["mechanism"] as? String ?? NSLocalizedString("unknown_mechanism", comment: ""),
+                    activity: value["activity"] as? String ?? NSLocalizedString("unknown_activity", comment: ""),
+                    environment: value["environment"] as? String ?? NSLocalizedString("unknown_environment", comment: ""),
                     cgState: value["cgState"] as? Int ?? 0
                 )
             }
