@@ -24,8 +24,37 @@
     "A questionnaire has already been submitted today." : {
 
     },
+    "activity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activity"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tevékenység"
+          }
+        }
+      }
+    },
     "Add" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hozzáadás"
+          }
+        }
+      }
     },
     "All Time" : {
 
@@ -42,7 +71,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sikerült, de majdnem elestem"
+            "value" : "Befejezve, de majdnem eleséssel"
           }
         }
       }
@@ -70,8 +99,37 @@
     "Banner Notifications" : {
 
     },
-    "CG Therapy State" : {
-
+    "busy_place" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Busy Place"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forgalmas hely"
+          }
+        }
+      }
+    },
+    "cg_therapy_state" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CG Therapy State"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CG Terápia"
+          }
+        }
+      }
     },
     "Clear Storage" : {
 
@@ -99,10 +157,32 @@
     "Close" : {
       "comment" : "Close Button",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vissza"
+          }
+        }
+      }
+    },
+    "constrained_place" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Constrained Place"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szűk hely"
           }
         }
       }
@@ -119,7 +199,23 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Egyáltalán nem sikerült elvégezni"
+            "value" : "Egyáltalán nem sikerült megcsinálni"
+          }
+        }
+      }
+    },
+    "cycling" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cycling"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kerékpározás"
           }
         }
       }
@@ -141,20 +237,93 @@
         }
       }
     },
-    "Date" : {
-
+    "date" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dátum"
+          }
+        }
+      }
+    },
+    "dizziness_vertigo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dizziness/Vertigo"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szédülés/Vertigo"
+          }
+        }
+      }
     },
     "Edit" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
     },
     "End Date" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End Date"
+          }
+        }
+      }
     },
     "Enter Password" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Password"
+          }
+        }
+      }
     },
     "Enter Patient ID" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Patient ID"
+          }
+        }
+      }
+    },
+    "event" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Event"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Esemény"
+          }
+        }
+      }
     },
     "Exercise" : {
       "comment" : "Exercise button",
@@ -185,7 +354,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Állj meg zárt lábbal és csukott szemmel 30 másodpercig. Ismételd meg 5 alkalommal."
+            "value" : "Álljon nyugodtan, lábfejek összezárva, csukott szemmel. Ismételd meg ötször."
           }
         }
       }
@@ -202,7 +371,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Állj meg zárt lábbal és nyitott szemmel 30 másodpercig. Ismételd meg 5 alkalommal."
+            "value" : "Álljon nyugodtan, lábfejek összezárva, nyitott szemmel. Ismételd meg ötször."
           }
         }
       }
@@ -236,7 +405,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kérjük, győződjön meg róla, hogy a terápiás készülék be van kapcsolva. Minden gyakorlatot végezzen el 5 alkalommal, körülbelül 30 másodpercig.\n\nÉrtékelje tapasztalatát egy 1-től 5-ig terjedő skálán, a nehézségi szint csökkenő sorrendjében balról jobbra.\n0% = Egyáltalán nem sikerült elvégezni\nKb. 25% = Sikerült, de majdnem elestem\nKb. 50% = Sikerült, de jelentős nehézségekkel (ingadozás)\nKb. 75% = Sikerült, kisebb nehézségekkel (ingadozás)\n100% = Sikerült probléma nélkül\n\nVálassza az NA opciót, ha ma nem végezte el a tevékenységet."
+            "value" : "Győződjön meg arról, hogy a terápiás készülék be van kapcsolva.\n Végezzen minden gyakorlatot 5 alkalommal körülbelül 30 másodpercig.\n\n Értékelje tapasztalatait egy 0%-től 100% terjedő skálán balról jobbra csökkenő nehézségi sorrendben.\n\n0% = Egyáltalán nem sikerült megcsinálni\nKörülbelül 25% = Befejezve, de majdnem eleséssel\nKörülbelül 50% = Befejezve, de jelentős nehézségek árán (megingással)\nKörülbelül 75% = Kis nehézségek árán teljesítve (megingás)\n100% = Problémák nélkül befejezve\n\nVálassza az NA lehetőséget, ha ma nem végezte el a tevékenységet"
           }
         }
       }
@@ -256,7 +425,23 @@
     "Export Questionnaire" : {
 
     },
-    "Falls Diary" : {
+    "fall" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fall"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Elesés"
+          }
+        }
+      }
+    },
+    "falls_diary" : {
 
     },
     "Falls_diary" : {
@@ -292,6 +477,70 @@
         }
       }
     },
+    "freefall" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Freefall"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szabad esés"
+          }
+        }
+      }
+    },
+    "impaired_consciousness" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impaired Consciousness"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tudatzavar"
+          }
+        }
+      }
+    },
+    "indoor_dark" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indoor (Dark)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beltéri (sötét)"
+          }
+        }
+      }
+    },
+    "indoor_light" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indoor (Light)"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beltéri (világos)"
+          }
+        }
+      }
+    },
     "Language" : {
 
     },
@@ -301,12 +550,50 @@
     "Log in" : {
 
     },
+    "mechanism" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mechanism"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Állapot"
+          }
+        }
+      }
+    },
     "NA - Not Applicable" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NA - Not Applicable"
+          }
+        },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "NA"
+          }
+        }
+      }
+    },
+    "near_fall" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Near Fall"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Majdnem elesés"
           }
         }
       }
@@ -328,11 +615,37 @@
         }
       }
     },
-    "No data available." : {
+    "no_data_available" : {
 
     },
     "OK" : {
 
+    },
+    "other" : {
+      "localizations" : {
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Egyéb"
+          }
+        }
+      }
+    },
+    "outdoor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Outdoor"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kültéri"
+          }
+        }
+      }
     },
     "Password" : {
 
@@ -344,7 +657,14 @@
 
     },
     "Please restart the application for changes to take effect." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please restart the application for the changes to take effect."
+          }
+        }
+      }
     },
     "Previous" : {
       "localizations" : {
@@ -872,7 +1192,7 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kérjük, értékelje a mai tevékenységek teljesítményét egy 1-től 10-ig terjedő skálán\n1 = Önállóan\n2 = Kényelmetlen\n3 = Csökkent képesség\n4 = Lassabban, óvatosan, odafigyelve\n5 = Időnként tárgyat használ segítségül\n6 = Egy tárgya kell használnia segítségül\n7 = Speciális felszerelést kell használni\n8 = Fizikai segítségre van szüksége\n9 = Önállóan nem végezhető\n10 = Túl nehéz, már nem teljesíthető\n\n Válassza az NA lehetőséget, ha ma nem végezte el a tevékenységet"
+            "value" : "Kérjük, értékelje a mai tevékenységek teljesítményét egy 1-től 10-ig terjedő skálán\n1 = Önállóan\n2 = Kényelmetlen\n3 = Csökkent képesség\n4 = Lassabban, óvatosan, odafigyelve\n5 = Időnként tárgyat használ segítségül\n6 = Egy tárgya kell használnia segítségül\n7 = Speciális felszerelést kell használni\n8 = Fizikai segítségre van szüksége\n9 = Önállóan nem végezhető\n10 = Túl nehéz, már nem teljesíthető\n\nVálassza az NA lehetőséget, ha ma nem végezte el a tevékenységet"
           }
         }
       }
@@ -1038,15 +1358,71 @@
       }
     },
     "Record Submitted" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Submitted"
+          }
+        }
+      }
     },
-    "Resume" : {
-      "comment" : "Resume",
+    "record_submitted" : {
       "localizations" : {
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
+            "value" : "Bejegyzés elküldve"
+          }
+        }
+      }
+    },
+    "Resume" : {
+      "comment" : "Resume",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resume"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "Folytatás"
+          }
+        }
+      }
+    },
+    "running" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Running"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Futás"
+          }
+        }
+      }
+    },
+    "save" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mentés"
           }
         }
       }
@@ -1064,14 +1440,92 @@
         }
       }
     },
+    "select_activity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Activity"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tevékenység kiválasztása"
+          }
+        }
+      }
+    },
+    "select_environment" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Environment"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Válassz környezetet"
+          }
+        }
+      }
+    },
+    "select_event_type" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Event Type"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Eseménytípus kiválasztása"
+          }
+        }
+      }
+    },
+    "select_mechanism" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Mechanism"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Elesés módja"
+          }
+        }
+      }
+    },
     "Set" : {
 
     },
     "Settings" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
     },
     "Settings Saved" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings Saved"
+          }
+        }
+      }
     },
     "significant_difficulty" : {
       "extractionState" : "manual",
@@ -1085,7 +1539,23 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sikerült, de jelentős nehézségekkel (ingadozás)"
+            "value" : "Befejezve, de jelentős nehézségek árán (megingással)"
+          }
+        }
+      }
+    },
+    "sitting" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sitting"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ülés"
           }
         }
       }
@@ -1102,17 +1572,94 @@
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sikerült, kisebb nehézségekkel (ingadozás)"
+            "value" : "Kis nehézségek árán teljesítve (megingás)"
+          }
+        }
+      }
+    },
+    "sport" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sport"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sport"
+          }
+        }
+      }
+    },
+    "stairs_down" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stairs down"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lépcsőn le"
+          }
+        }
+      }
+    },
+    "stairs_up" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stairs up"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lépcsőn fel"
+          }
+        }
+      }
+    },
+    "standing" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standing"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Állás"
           }
         }
       }
     },
     "Start Date" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Date"
+          }
+        }
+      }
     },
     "Submit" : {
       "comment" : "Submit",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit"
+          }
+        },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1122,16 +1669,199 @@
       }
     },
     "Summary" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Summary"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Összegzés"
+          }
+        }
+      }
+    },
+    "sway" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sway"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingadozás"
+          }
+        }
+      }
     },
     "Sync Data" : {
 
     },
     "The record has been successfully submitted." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The record has been successfully submitted."
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A bejegyzés sikeresen el lett küldve."
+          }
+        }
+      }
     },
-    "Time" : {
-
+    "time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hozzávetőleges idő"
+          }
+        }
+      }
+    },
+    "tripping" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tripping"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Botlás"
+          }
+        }
+      }
+    },
+    "unknown_activity" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Activity"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen tevékenység"
+          }
+        }
+      }
+    },
+    "unknown_date" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Date"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen dátum"
+          }
+        }
+      }
+    },
+    "unknown_environment" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Environment"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen környezet"
+          }
+        }
+      }
+    },
+    "unknown_event" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Event"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen esemény"
+          }
+        }
+      }
+    },
+    "unknown_mechanism" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Mechanism"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen mechanizmus"
+          }
+        }
+      }
+    },
+    "unknown_time" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Time"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ismeretlen idő"
+          }
+        }
+      }
+    },
+    "walking" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walking"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Séta"
+          }
+        }
+      }
     },
     "without_problems" : {
       "extractionState" : "manual",
@@ -1140,6 +1870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Completed without problems"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Problémák nélkül befejezve"
           }
         }
       }

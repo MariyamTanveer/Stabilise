@@ -3,10 +3,10 @@ import SwiftUI
 struct FallsDiaryQuestions: View {
     @State private var date = Date()
     @State private var approximateTime = Date()
-    @State private var eventType = "Select event type"
-    @State private var environment = "Select environment"
-    @State private var activity = "Select activity"
-    @State private var fallMechanism = "Select mechanism"
+    @State private var eventType = NSLocalizedString("select_event_type", comment: "")
+    @State private var environment = NSLocalizedString("select_environment", comment: "")
+    @State private var activity = NSLocalizedString("select_activity", comment: "")
+    @State private var fallMechanism = NSLocalizedString("select_mechanism", comment: "")
     @State private var cgTherapyState = false
     @State private var showAlert = false
     @State private var alertMessage = ""
@@ -16,28 +16,58 @@ struct FallsDiaryQuestions: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Falls Diary")
+            Text(NSLocalizedString("falls_diary", comment: ""))
                 .modifier(TextStyles.styledHeadline())
             
             VStack(spacing: 15) {
-                DatePicker("Date", selection: $date, in: ...Date(), displayedComponents: .date)
+                DatePicker(NSLocalizedString("date", comment: ""), selection: $date, in: ...Date(), displayedComponents: .date)
                     .dropDownStyle()
                 
-                DatePicker("Time", selection: $approximateTime, displayedComponents: .hourAndMinute)
+                DatePicker(NSLocalizedString("time", comment: ""), selection: $approximateTime, displayedComponents: .hourAndMinute)
                     .dropDownStyle()
                 
-                DropdownField(title: $eventType, options: ["Fall", "Near Fall", "Sway"])
-                DropdownField(title: $environment, options: ["Outdoor", "Indoor Light", "Indoor Dark", "Busy Place", "Constrained Place", "Other"])
-                DropdownField(title: $activity, options: ["Walking", "Running", "Standing", "Stairs Up", "Stairs Down", "Sitting", "Cycling", "Sport"])
-                DropdownField(title: $fallMechanism, options: ["Freefall", "Dizziness/Vertigo", "Tripping", "Impaired Consciousness", "Other"])
+                DropdownField(title: $eventType, options: [
+                    NSLocalizedString("fall", comment: ""),
+                    NSLocalizedString("near_fall", comment: ""),
+                    NSLocalizedString("sway", comment: "")
+                ])
                 
-                Toggle("CG Therapy State", isOn: $cgTherapyState)
+                DropdownField(title: $environment, options: [
+                    NSLocalizedString("outdoor", comment: ""),
+                    NSLocalizedString("indoor_light", comment: ""),
+                    NSLocalizedString("indoor_dark", comment: ""),
+                    NSLocalizedString("busy_place", comment: ""),
+                    NSLocalizedString("constrained_place", comment: ""),
+                    NSLocalizedString("other", comment: "")
+                ])
+                
+                DropdownField(title: $activity, options: [
+                    NSLocalizedString("walking", comment: ""),
+                    NSLocalizedString("running", comment: ""),
+                    NSLocalizedString("standing", comment: ""),
+                    NSLocalizedString("stairs_up", comment: ""),
+                    NSLocalizedString("stairs_down", comment: ""),
+                    NSLocalizedString("sitting", comment: ""),
+                    NSLocalizedString("cycling", comment: ""),
+                    NSLocalizedString("sport", comment: "")
+                ])
+                
+
+                DropdownField(title: $fallMechanism, options: [
+                    NSLocalizedString("freefall", comment: ""),
+                    NSLocalizedString("dizziness_vertigo", comment: ""),
+                    NSLocalizedString("tripping", comment: ""),
+                    NSLocalizedString("impaired_consciousness", comment: ""),
+                    NSLocalizedString("other", comment: "")
+                ])
+                
+                Toggle(NSLocalizedString("cg_therapy_state", comment: ""), isOn: $cgTherapyState)
                     .dropDownStyle()
             }
             .padding(.bottom, 10)
             
             VStack {
-                Button("Save") {
+                Button(NSLocalizedString("save", comment: "")) {
                     showDetails = true;
                     saveDraft();
                 }
